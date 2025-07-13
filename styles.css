@@ -37,7 +37,7 @@ body {
 
 /* Navegación */
 header {
-    background-color: rgba(10, 10, 42, 0.8); /* Azul oscuro con transparencia */
+    background-color: rgba(10, 10, 42, 0.8);
     backdrop-filter: blur(10px);
     color: var(--color-light);
     padding: 15px 0;
@@ -85,11 +85,11 @@ nav {
     display: flex;
     align-items: center;
     font-size: 22px;
-    font-weight: 700; /* Bold en Montserrat */
+    font-weight: 700;
 }
 
 .logo-img {
-    height: 60px; /* Aumentado de 40px a 60px */
+    height: 60px;
     width: auto;
     margin-right: 12px;
     transition: transform 0.3s ease;
@@ -102,7 +102,7 @@ nav {
 .logo-text {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Bold en Montserrat */
+    font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -126,7 +126,7 @@ nav {
     transition: 0.3s;
     padding: 8px 0;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500; /* Medium en Montserrat */
+    font-weight: 500;
     position: relative;
 }
 
@@ -145,6 +145,10 @@ nav {
     width: 100%;
 }
 
+.nav-links a.active::after {
+    width: 100%;
+}
+
 /* Botones */
 .cta-button {
     display: inline-flex;
@@ -155,7 +159,7 @@ nav {
     padding: 12px 24px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
     transition: 0.3s;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
@@ -226,7 +230,7 @@ nav {
     font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 24px;
-    font-weight: 800; /* Extra Bold */
+    font-weight: 800;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -385,7 +389,7 @@ section {
 .section-header h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -454,7 +458,7 @@ section {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: var(--color-light);
-    font-weight: 700; /* Bold */
+    font-weight: 700;
 }
 
 .feature p {
@@ -507,7 +511,7 @@ section {
     color: var(--color-light);
     position: relative;
     padding-bottom: 10px;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
 }
 
 .info-card h3::after {
@@ -539,7 +543,7 @@ section {
     margin-bottom: 30px;
     color: var(--color-light);
     text-align: center;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
 }
 
 .companies-grid {
@@ -568,7 +572,7 @@ section {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: var(--color-light);
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
 }
 
 .company-type p {
@@ -600,7 +604,7 @@ section {
     margin-bottom: 15px;
     font-size: 1.5rem;
     color: var(--color-light);
-    font-weight: 700; /* Bold */
+    font-weight: 700;
     position: relative;
     padding-bottom: 10px;
 }
@@ -644,76 +648,64 @@ section {
     margin: 0 auto;
 }
 
-.contact-form {
+.contact-cta {
     background: rgba(10, 10, 42, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(127, 0, 255, 0.2);
     border-radius: 16px;
-    padding: 40px;
+    padding: 60px 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.form-group {
+.contact-content h3 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500; /* Medium */
     color: var(--color-light);
-}
-
-input, textarea {
-    width: 100%;
-    padding: 14px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(127, 0, 255, 0.2);
-    border-radius: 8px;
-    color: var(--color-light);
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: rgba(127, 0, 255, 0.5);
-    box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.2);
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-button[type="submit"] {
+    font-weight: 700;
     background: var(--gradient-primary);
-    color: var(--color-light);
-    border: none;
-    padding: 14px 30px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600; /* Semi-bold */
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    background: var(--gradient-primary);
+    color: var(--color-light);
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 8px 25px rgba(127, 0, 255, 0.3);
 }
 
-button[type="submit"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(127, 0, 255, 0.2);
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(127, 0, 255, 0.4);
 }
 
-button[type="submit"] .arrow {
+.contact-button .arrow {
     transition: transform 0.3s;
+    font-size: 1.2rem;
 }
 
-button[type="submit"]:hover .arrow {
-    transform: translateX(4px);
+.contact-button:hover .arrow {
+    transform: translateX(5px);
 }
 
 /* Footer */
@@ -742,7 +734,7 @@ footer {
 
 .footer-logo span {
     font-size: 1.5rem;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -757,7 +749,7 @@ footer {
 .footer-column h4 {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
     color: var(--color-light);
 }
 
@@ -894,6 +886,14 @@ footer {
         gap: 20px;
         text-align: center;
     }
+
+    .contact-cta {
+        padding: 40px 30px;
+    }
+
+    .contact-content h3 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -909,7 +909,7 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    .contact-form {
+    .contact-cta {
         padding: 30px 20px;
     }
     
@@ -917,5 +917,13 @@ footer {
         flex-direction: column;
         gap: 30px;
     }
-}
 
+    .contact-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .contact-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}

@@ -78,46 +78,6 @@ window.addEventListener('resize', () => {
     }
 });
 
-// Manejo del formulario de contacto
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        // El formulario se maneja directamente por FormSubmit
-        // Agregamos solo la validación del lado del cliente
-        contactForm.addEventListener('submit', function(e) {
-            // Validación básica de formulario
-            let isValid = true;
-            const requiredFields = contactForm.querySelectorAll('[required]');
-            
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('error');
-                } else {
-                    field.classList.remove('error');
-                }
-            });
-            
-            // Validación específica para email
-            const emailField = contactForm.querySelector('#email');
-            if (emailField && emailField.value) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailField.value)) {
-                    isValid = false;
-                    emailField.classList.add('error');
-                }
-            }
-            
-            if (!isValid) {
-                // Solo prevenimos el envío si hay errores
-                e.preventDefault();
-                alert('Por favor, completa todos los campos requeridos correctamente.');
-            }
-        });
-    }
-});
-
 // Añadir efecto de resaltado en la navegación según la sección visible
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
@@ -147,7 +107,7 @@ window.addEventListener('scroll', () => {
 
 // Función para animar elementos al entrar en el viewport
 function animateOnScroll() {
-    const elementsToAnimate = document.querySelectorAll('.feature, .service, .info-card, .company-type, .contact-form');
+    const elementsToAnimate = document.querySelectorAll('.feature, .service, .info-card, .company-type, .contact-cta');
     
     elementsToAnimate.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
@@ -162,7 +122,7 @@ function animateOnScroll() {
 
 // Establecer opacidad inicial para animaciones
 document.addEventListener('DOMContentLoaded', () => {
-    const elementsToAnimate = document.querySelectorAll('.feature, .service, .info-card, .company-type, .contact-form');
+    const elementsToAnimate = document.querySelectorAll('.feature, .service, .info-card, .company-type, .contact-cta');
     
     elementsToAnimate.forEach(element => {
         element.style.opacity = '0';

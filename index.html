@@ -529,15 +529,20 @@
     </div>
 
    <!-- JavaScript del Chat -->
-<script>
+   <script>
     // URL del webhook de n8n (PRODUCTION URL)
     const WEBHOOK_URL = 'https://primary-production-c3fd7.up.railway.app/webhook/chatbot';
   
     // ====== SESSION ID ÚNICO POR USUARIO ======
+    // Usamos localStorage para mantener la misma conversación si el usuario regresa
+    // (A menos que esté en Incógnito, en cuyo caso será un ID nuevo por ventana)
     const CHAT_SESSION_KEY = 'bairesia_chat_session';
     let sessionId = localStorage.getItem(CHAT_SESSION_KEY);
+    
+    // Si no existe, generamos un nuevo ID único
     if (!sessionId) {
-      sessionId = (crypto?.randomUUID && crypto.randomUUID()) || String(Date.now()) + '-' + Math.random();
+      // Usamos crypto.randomUUID si está disponible, sino un fallback con timestamp y random
+      sessionId = (window.crypto && window.crypto.randomUUID && window.crypto.randomUUID()) || String(Date.now()) + '-' + Math.random().toString(36).substring(2, 9);
       localStorage.setItem(CHAT_SESSION_KEY, sessionId);
     }
   
@@ -596,8 +601,9 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             chatInput: message,
-            sessionId,                 // <<--- IMPORTANTE: enviamos la sesión
-            timestamp: Date.now()      // opcional, útil para debug
+            // AHORA ENVIAMOS EL ID DE SESIÓN ÚNICO
+            session_id: sessionId,                
+            timestamp: Date.now()
           })
         });
   
@@ -633,8 +639,5 @@
       if (e.key === 'Enter') sendMessage();
     });
   </script>
-  <!-- CHATBOT WIDGET - TERMINA AQUÍ -->
-  
-    <script src="script.js"></script>
 </body>
 </html>

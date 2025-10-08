@@ -530,14 +530,23 @@
 
    <!-- JavaScript del Chat -->
    <script>
-    // URL del webhook de n8n (PRODUCTION URL)
+    // URL del webhook.
+    // *** ESTA ES LA URL DE PRODUCCIÓN DE TU FLUJO DE N8N ***
     const WEBHOOK_URL = 'https://primary-production-c3fd7.up.railway.app/webhook/chatbot';
+    // La línea de prueba local (http://127.0.0.1:5000/...) ha sido eliminada.
   
     // ====== SESSION ID ÚNICO POR USUARIO ======
     // Usamos localStorage para mantener la misma conversación si el usuario regresa
     // (A menos que esté en Incógnito, en cuyo caso será un ID nuevo por ventana)
     const CHAT_SESSION_KEY = 'bairesia_chat_session';
     let sessionId = localStorage.getItem(CHAT_SESSION_KEY);
+    
+    // Si no existe, generamos un nuevo ID único
+    if (!sessionId) {
+      // Usamos crypto.randomUUID si está disponible, sino un fallback con timestamp y random
+      sessionId = (window.crypto && window.crypto.randomUUID && window.crypto.randomUUID()) || String(Date.now()) + '-' + Math.random().toString(36).substring(2, 9);
+      localStorage.setItem(CHAT_SESSION_KEY, sessionId);
+    }
     
     // Si no existe, generamos un nuevo ID único
     if (!sessionId) {
@@ -571,7 +580,7 @@
   
       const contentDiv = document.createElement('div');
       contentDiv.className = 'message-content';
-      contentDiv.textContent = content;
+      contentDiv.innerHTML = content;
   
       messageDiv.appendChild(contentDiv);
       chatMessages.insertBefore(messageDiv, typingIndicator);

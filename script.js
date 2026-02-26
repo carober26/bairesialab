@@ -1,137 +1,31 @@
-// Script para manejar navegación y funcionalidad del sitio moderno
-
-// Efecto de scroll para la navegación
+// Manejo de Scroll para Header y Logo Flotante
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     const floatingLogo = document.querySelector('.floating-logo');
-    const scrollPosition = window.scrollY;
     
-    if (scrollPosition > 50) {
-        header.classList.add('scrolled');
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = "rgba(10, 10, 42, 0.95)";
     } else {
-        header.classList.remove('scrolled');
+        header.style.backgroundColor = "rgba(10, 10, 42, 0.8)";
     }
     
-    // Mostrar/ocultar logo flotante según scroll
-    if (scrollPosition > 300) {
+    if (window.scrollY > 300) {
         floatingLogo.classList.add('visible');
     } else {
         floatingLogo.classList.remove('visible');
     }
 });
 
-// Efecto de scroll suave para navegación
+// Scroll Suave para los links de navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Ajuste para el header fijo
+                top: target.offsetTop - 80,
                 behavior: 'smooth'
             });
-            
-            // Si estamos en móvil, cerrar el menú después de hacer clic
-            if (window.innerWidth <= 768) {
-                document.querySelector('.nav-links').classList.remove('nav-active');
-            }
         }
     });
-});
-
-// Funcionalidad para menú móvil
-const setupMobileMenu = () => {
-    // Solo crear el botón si no existe
-    if (!document.querySelector('.menu-toggle')) {
-        const nav = document.querySelector('nav');
-        const menuToggle = document.createElement('button');
-        menuToggle.className = 'menu-toggle';
-        menuToggle.innerHTML = '☰';
-        nav.appendChild(menuToggle);
-        
-        menuToggle.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('nav-active');
-        });
-    }
-};
-
-// Configurar menú móvil en carga y en cambio de tamaño
-window.addEventListener('load', () => {
-    if (window.innerWidth <= 768) {
-        setupMobileMenu();
-    }
-    
-    // Animación de elementos al cargar la página
-    animateOnScroll();
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth <= 768) {
-        setupMobileMenu();
-    } else {
-        // Asegurarse de que el menú esté visible en escritorio
-        document.querySelector('.nav-links').classList.remove('nav-active');
-    }
-});
-
-// Añadir efecto de resaltado en la navegación según la sección visible
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    let currentSection = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= (sectionTop - 150)) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
-    
-    // Llamar a la función para animar elementos al hacer scroll
-    animateOnScroll();
-});
-
-// Función para animar elementos al entrar en el viewport
-function animateOnScroll() {
-    const elementsToAnimate = document.querySelectorAll('.feature, .service, .info-card, .company-type, .contact-cta');
-    
-    elementsToAnimate.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight * 0.85; // 85% del alto de la pantalla
-        
-        if (elementPosition < screenPosition) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
-}
-
-// Establecer opacidad inicial para animaciones
-document.addEventListener('DOMContentLoaded', () => {
-    const elementsToAnimate = document.querySelectorAll('.feature, .service, .info-card, .company-type, .contact-cta');
-    
-    elementsToAnimate.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    // Iniciar animaciones después de un breve retraso
-    setTimeout(() => {
-        animateOnScroll();
-    }, 300);
 });

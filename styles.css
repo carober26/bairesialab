@@ -1,3 +1,4 @@
+/* Estilos modernos Baires IA Lab - Restaurados */
 :root {
     --color-primary: #7F00FF;
     --color-secondary: #007BFF;
@@ -7,34 +8,48 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-
-body { background-color: var(--color-dark); color: var(--color-light); line-height: 1.6; overflow-x: hidden; }
-
+body { background-color: var(--color-dark); color: var(--color-light); line-height: 1.6; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-header { background-color: rgba(10, 10, 42, 0.8); backdrop-filter: blur(10px); padding: 15px 0; position: fixed; width: 100%; z-index: 100; }
-
+/* Header y Nav */
+header { background-color: rgba(10, 10, 42, 0.8); backdrop-filter: blur(10px); padding: 15px 0; position: fixed; width: 100%; z-index: 100; transition: 0.3s; }
 nav { display: flex; justify-content: space-between; align-items: center; }
-
 .logo-text { font-weight: 700; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 22px; }
-
 .nav-links { display: flex; list-style: none; gap: 2rem; }
-
 .nav-links a { color: white; text-decoration: none; font-weight: 500; }
 
-/* Hero Section */
-.hero-section { min-height: 100vh; display: flex; align-items: center; position: relative; }
-
+/* Hero */
+.hero-section { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 80px; }
 .hero-title { font-size: 4rem; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; }
+.hero-visual { position: absolute; right: 0; width: 45%; }
+.ai-element { position: absolute; border-radius: 12px; background: rgba(127, 0, 255, 0.2); border: 1px solid rgba(127, 0, 255, 0.2); animation: float 6s infinite ease-in-out; }
 
-.cta-button { background: var(--gradient-primary); padding: 12px 24px; border-radius: 50px; color: white; text-decoration: none; font-weight: 600; display: inline-flex; margin-top: 20px; }
+/* Sections */
+section { padding: 100px 0; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.features, .cards-grid, .services, .companies-grid { display: grid; gap: 30px; }
+.features { grid-template-columns: repeat(3, 1fr); }
+.cards-grid, .services { grid-template-columns: repeat(2, 1fr); }
+.companies-grid { grid-template-columns: repeat(4, 1fr); }
 
-/* Utility */
-.floating-logo { position: fixed; top: 20px; left: 20px; z-index: 101; opacity: 0; transition: 0.3s; }
-.floating-logo.visible { opacity: 1; }
+.feature, .info-card, .service, .company-type {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(127, 0, 255, 0.2);
+    transition: 0.3s;
+}
+
+.feature:hover, .service:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.08); }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+/* Footer */
+footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); }
 
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title { font-size: 2.5rem; }
     .hero-visual { display: none; }
+    .features, .cards-grid, .services, .companies-grid { grid-template-columns: 1fr; }
 }

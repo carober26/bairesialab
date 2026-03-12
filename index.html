@@ -88,13 +88,17 @@
         .btn-secondary:hover { background: var(--purple); color: white; transform: translateY(-2px); }
         .btn-outline-white { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: white; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: border-color 0.2s, background 0.2s, transform 0.2s; }
         .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
-        /* CTA CALL MINI */
-        .cta-call-strip { padding: 56px 24px; background: var(--dark); text-align: center; }
-        .cta-call-strip h3 { font-size: 22px; font-weight: 700; color: white; margin-bottom: 10px; letter-spacing: -0.3px; }
-        .cta-call-strip p { font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
-        .cta-call-strip .btn-primary { font-size: 15px; padding: 14px 32px; }
-        /* CTA DUAL */
-        .cta-dual { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
+        /* CTA PATHS */
+        .cta-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 52px; }
+        .cta-path { border-radius: 20px; padding: 40px 36px; text-align: left; display: flex; flex-direction: column; gap: 12px; }
+        .cta-path--call { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+        .cta-path--form { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); }
+        .cta-path-icon { font-size: 28px; margin-bottom: 4px; }
+        .cta-path-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+        .cta-path h3 { font-size: 20px; font-weight: 700; color: white; letter-spacing: -0.3px; line-height: 1.25; }
+        .cta-path p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; flex: 1; }
+        .cta-path .btn-primary { align-self: flex-start; margin-top: 8px; font-size: 14px; padding: 14px 26px; }
+        .cta-path .btn-outline-white { align-self: flex-start; margin-top: 8px; font-size: 14px; padding: 14px 26px; }
         .hero-visual { display: flex; justify-content: center; align-items: center; }
         .hero-card-stack { position: relative; width: 380px; height: 400px; }
         .flow-card { position: absolute; background: white; border-radius: 16px; padding: 20px 24px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); border: 1px solid var(--gray-border); }
@@ -281,6 +285,7 @@
             .stat-divider { width: 64px; height: 1px; }
             .stat-item { padding: 0; }
             .faq-question { font-size: 14px; }
+            .cta-paths { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
             .steps-container { grid-template-columns: 1fr; }
@@ -600,22 +605,27 @@
         </div>
     </div>
 </section>
-<!-- CALL STRIP -->
-<section class="cta-call-strip">
-    <h3>¿Preferís hablar directo?</h3>
-    <p>Agendá una llamada de 15 minutos sin costo. Te contamos cómo podría funcionar para tu negocio.</p>
-    <a href="https://link.bairesialab.com/widget/bookings/baires-ia-lab" target="_blank" class="btn-primary">📞 Agendá tu call de 15 min <span class="arrow">→</span></a>
-</section>
 <!-- CTA -->
 <section id="contacto" class="cta-section">
-    <div class="cta-inner">
+    <div class="cta-inner" style="max-width: 860px;">
         <h2>¿Tu negocio ya vende<br>pero el proceso <span>puede mejorar</span>?</h2>
-        <p>Elegí cómo preferís arrancarlo. Sin compromiso.</p>
-        <div class="cta-dual">
-            <a href="https://link.bairesialab.com/widget/bookings/baires-ia-lab" target="_blank" class="btn-primary" style="font-size: 16px; padding: 18px 40px;">📞 Agendá tu call de 15 min <span class="arrow">→</span></a>
-            <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-outline-white" style="font-size: 16px; padding: 18px 40px;">Completar formulario</a>
+        <p>Elegí cómo querés empezar. Sin compromiso.</p>
+        <div class="cta-paths">
+            <div class="cta-path cta-path--call">
+                <div class="cta-path-icon">📞</div>
+                <div class="cta-path-label">Respuesta inmediata</div>
+                <h3>Hablemos directo</h3>
+                <p>15 minutos sin costo. Te contamos exactamente qué se puede automatizar en tu negocio y cómo.</p>
+                <a href="https://link.bairesialab.com/widget/bookings/baires-ia-lab" target="_blank" class="btn-primary">Agendá tu call <span class="arrow">→</span></a>
+            </div>
+            <div class="cta-path cta-path--form">
+                <div class="cta-path-icon">📝</div>
+                <div class="cta-path-label">Cuando tengas un momento</div>
+                <h3>Tomá tu tiempo</h3>
+                <p>Completá el formulario con los detalles de tu negocio y te respondemos en menos de 24 horas hábiles.</p>
+                <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-outline-white">Completar formulario <span class="arrow">→</span></a>
+            </div>
         </div>
-        <p class="cta-note">Respondemos en menos de 24 horas hábiles</p>
     </div>
 </section>
 <!-- FOOTER -->

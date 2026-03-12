@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baires IA Lab — Automatización con IA para escalar tu negocio</title>
     <link rel="icon" type="image/png" href="archivos/isologo-cropped (1).png">
-
-    <!-- ─── SEO BÁSICO ─── -->
     <meta name="description" content="Baires IA Lab — Automatizamos procesos de venta con IA. CRM inteligente, chatbots, email marketing y seguimiento automático para negocios digitales en Argentina.">
     <meta name="keywords" content="automatización con IA, chatbots Argentina, CRM automatizado, automatización de ventas, Go High Level Argentina, agentes IA, email marketing automatizado, Buenos Aires IA">
     <meta name="author" content="Baires IA Lab">
@@ -15,8 +13,6 @@
     <meta name="geo.region" content="AR-C">
     <meta name="geo.placename" content="Buenos Aires, Argentina">
     <link rel="canonical" href="https://www.bairesialab.com/">
-
-    <!-- ─── OPEN GRAPH (redes sociales) ─── -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.bairesialab.com/">
     <meta property="og:title" content="Baires IA Lab — Automatización con IA para escalar tu negocio">
@@ -24,14 +20,10 @@
     <meta property="og:image" content="https://www.bairesialab.com/archivos/isologo-cropped (1).png">
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="Baires IA Lab">
-
-    <!-- ─── TWITTER CARD ─── -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Baires IA Lab — Automatización con IA para escalar tu negocio">
     <meta name="twitter:description" content="Diseñamos sistemas automáticos que responden consultas, organizan clientes y hacen seguimiento — para que puedas enfocarte en escalar, no en responder mensajes.">
     <meta name="twitter:image" content="https://www.bairesialab.com/archivos/isologo-cropped (1).png">
-
-    <!-- ─── SCHEMA.ORG (datos estructurados para Google) ─── -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -42,1248 +34,223 @@
       "description": "Automatizamos procesos de venta con IA. CRM inteligente, chatbots, email marketing y seguimiento automático para negocios digitales.",
       "email": "info@bairesialab.com",
       "telephone": "+5491162931964",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Buenos Aires",
-        "addressCountry": "AR"
-      },
+      "address": {"@type": "PostalAddress","addressLocality": "Buenos Aires","addressCountry": "AR"},
       "areaServed": "Argentina",
-      "serviceType": [
-        "Automatización con IA",
-        "CRM inteligente",
-        "Chatbots y asistentes virtuales",
-        "Email marketing automatizado",
-        "Automatización multicanal",
-        "Agentes de inteligencia artificial"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/company/bairesialab"
-      ]
+      "serviceType": ["Automatización con IA","CRM inteligente","Chatbots y asistentes virtuales","Email marketing automatizado","Automatización multicanal","Agentes de inteligencia artificial"],
+      "sameAs": ["https://www.linkedin.com/company/bairesialab"]
     }
     </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --blue: #007BFF;
-            --purple: #7F00FF;
-            --dark: #0A0A2A;
-            --black: #000000;
-            --white: #ffffff;
-            --gray-light: #f5f5f7;
-            --gray-text: #555;
-            --gray-border: #e8e8e8;
+            --blue: #007BFF; --purple: #7F00FF; --dark: #0A0A2A;
+            --black: #000000; --white: #ffffff; --gray-light: #f5f5f7;
+            --gray-text: #555; --gray-border: #e8e8e8;
             --gradient: linear-gradient(135deg, #007BFF, #7F00FF);
             --gradient-soft: linear-gradient(135deg, rgba(0,123,255,0.08), rgba(127,0,255,0.08));
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ─── HEADER ─── */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--gray-border);
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 2px 30px rgba(0,0,0,0.06);
-        }
-
-        nav {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 0 24px;
-            height: 68px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--gradient);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: white;
-        }
-
-        .logo-text {
-            font-weight: 700;
-            font-size: 16px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.3px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 36px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 500;
-            color: #555;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--purple);
-        }
-
-        .nav-cta {
-            background: var(--gradient);
-            color: white !important;
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-            font-size: 13px !important;
-            transition: opacity 0.2s, transform 0.2s !important;
-        }
-
-        .nav-cta:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-            color: white !important;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-            padding: 4px;
-        }
-
-        .menu-toggle span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: #1a1a1a;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-
-        /* ─── HERO ─── */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 24px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(127,0,255,0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0,123,255,0.05) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-inner {
-            max-width: 1180px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--blue);
-            margin-bottom: 24px;
-        }
-
-        .hero-tag::before {
-            content: '';
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.4rem, 4vw, 3.6rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            color: #0a0a0a;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 .gradient-text {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-desc {
-            font-size: 17px;
-            color: #555;
-            line-height: 1.7;
-            max-width: 480px;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--gradient);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 15px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 30px rgba(127,0,255,0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(127,0,255,0.3);
-        }
-
-        .btn-primary .arrow {
-            transition: transform 0.2s;
-        }
-
-        .btn-primary:hover .arrow {
-            transform: translateX(4px);
-        }
-
-        .btn-ghost {
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s;
-        }
-
-        .btn-ghost:hover {
-            color: var(--purple);
-        }
-
-        /* Hero Visual */
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-card-stack {
-            position: relative;
-            width: 380px;
-            height: 400px;
-        }
-
-        .flow-card {
-            position: absolute;
-            background: white;
-            border-radius: 16px;
-            padding: 20px 24px;
-            box-shadow: 0 4px 40px rgba(0,0,0,0.08);
-            border: 1px solid var(--gray-border);
-        }
-
-        .flow-card.card-main {
-            width: 300px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3;
-        }
-
-        .flow-card.card-back-1 {
-            width: 260px;
-            top: calc(50% - 30px);
-            left: calc(50% + 20px);
-            transform: translateY(-50%);
-            z-index: 2;
-            opacity: 0.5;
-        }
-
-        .flow-card.card-back-2 {
-            width: 240px;
-            top: calc(50% - 15px);
-            left: calc(50% + 38px);
-            transform: translateY(-50%);
-            z-index: 1;
-            opacity: 0.25;
-        }
-
-        .card-label {
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: var(--blue);
-            margin-bottom: 12px;
-        }
-
-        .card-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 16px;
-        }
-
-        .flow-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .flow-step {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .step-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .step-dot.active {
-            background: var(--gradient);
-            background: linear-gradient(135deg, #007BFF, #7F00FF);
-            box-shadow: 0 0 8px rgba(127,0,255,0.4);
-        }
-
-        .step-dot.done {
-            background: #22c55e;
-        }
-
-        .step-dot.pending {
-            background: #e5e5e5;
-        }
-
-        .step-text {
-            font-size: 13px;
-            color: #444;
-            font-weight: 500;
-        }
-
-        .card-badge {
-            position: absolute;
-            top: -16px;
-            right: -16px;
-            background: #22c55e;
-            color: white;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 50px;
-            white-space: nowrap;
-            box-shadow: 0 4px 16px rgba(34,197,94,0.3);
-            animation: pulse-badge 2.5s infinite;
-        }
-
-        @keyframes pulse-badge {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.04); }
-        }
-
-        .floating-stat {
-            position: absolute;
-            background: white;
-            border-radius: 12px;
-            padding: 12px 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-            border: 1px solid var(--gray-border);
-            z-index: 5;
-        }
-
-        .floating-stat.stat-1 {
-            top: 20px;
-            left: 0;
-            animation: float-1 4s ease-in-out infinite;
-        }
-
-        .floating-stat.stat-2 {
-            bottom: 30px;
-            right: -10px;
-            animation: float-2 5s ease-in-out infinite;
-        }
-
-        @keyframes float-1 {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        @keyframes float-2 {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(8px); }
-        }
-
-        .stat-number {
-            font-size: 20px;
-            font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 11px;
-            color: #888;
-            font-weight: 500;
-            margin-top: 2px;
-        }
-
-        /* ─── PROBLEM SECTION ─── */
-        .problem-section {
-            background: var(--gray-light);
-            padding: 100px 24px;
-        }
-
-        .section-inner {
-            max-width: 1180px;
-            margin: 0 auto;
-        }
-
-        .section-eyebrow {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--blue);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-eyebrow::before {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: var(--gradient);
-        }
-
-        .section-title {
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
-            font-weight: 800;
-            letter-spacing: -1px;
-            line-height: 1.15;
-            color: #0a0a0a;
-            max-width: 600px;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 17px;
-            color: #666;
-            max-width: 540px;
-            line-height: 1.7;
-            margin-bottom: 56px;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .problem-card {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            border: 1px solid var(--gray-border);
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .problem-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .problem-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.07);
-        }
-
-        .problem-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        .problem-icon.red {
-            background: #fff0f0;
-        }
-
-        .problem-icon.orange {
-            background: #fff7ed;
-        }
-
-        .problem-icon.yellow {
-            background: #fefce8;
-        }
-
-        .problem-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 10px;
-        }
-
-        .problem-card p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.65;
-        }
-
-        /* ─── SERVICES ─── */
-        .services-section {
-            padding: 100px 24px;
-            background: white;
-        }
-
-        .services-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-            margin-bottom: 64px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            border-radius: 16px;
-            padding: 36px;
-            border: 1px solid var(--gray-border);
-            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            cursor: default;
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .service-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: rgba(127,0,255,0.2);
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(127,0,255,0.07);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-num {
-            font-size: 11px;
-            font-weight: 700;
-            color: #ccc;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
-        }
-
-        .service-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 12px;
-            letter-spacing: -0.3px;
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* ─── CAPABILITIES ─── */
-        .capabilities-section {
-            padding: 100px 24px;
-            background: var(--gray-light);
-        }
-
-        .capabilities-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 56px;
-        }
-
-        .cap-card {
-            background: white;
-            border-radius: 16px;
-            padding: 28px;
-            border: 1px solid var(--gray-border);
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .cap-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .cap-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(127,0,255,0.07);
-            border-color: rgba(127,0,255,0.2);
-        }
-
-        .cap-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 12px;
-            background: var(--gradient-soft);
-            border: 1px solid rgba(127,0,255,0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            flex-shrink: 0;
-        }
-
-        .cap-card h3 {
-            font-size: 15px;
-            font-weight: 700;
-            color: #111;
-            letter-spacing: -0.2px;
-            line-height: 1.3;
-        }
-
-        .cap-card p {
-            font-size: 13px;
-            color: #777;
-            line-height: 1.65;
-            flex-grow: 1;
-        }
-
-        .cap-tag {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--blue);
-            background: rgba(0,123,255,0.07);
-            padding: 4px 10px;
-            border-radius: 50px;
-            letter-spacing: 0.3px;
-        }
-
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background: #ffffff; color: #1a1a1a; line-height: 1.6; overflow-x: hidden; }
+        /* HEADER */
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--gray-border); transition: all 0.3s ease; }
+        header.scrolled { box-shadow: 0 2px 30px rgba(0,0,0,0.06); }
+        nav { max-width: 1180px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-text { font-weight: 700; font-size: 16px; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.3px; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: #555; text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--purple); }
+        .nav-cta { background: var(--gradient); color: white !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; font-size: 13px !important; transition: opacity 0.2s, transform 0.2s !important; }
+        .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); color: white !important; }
+        .menu-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+        .menu-toggle span { display: block; width: 22px; height: 2px; background: #1a1a1a; border-radius: 2px; transition: all 0.3s; }
+        /* HERO */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 24px 80px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(127,0,255,0.06) 0%, transparent 70%); pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,123,255,0.05) 0%, transparent 70%); pointer-events: none; }
+        .hero-inner { max-width: 1180px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 24px; }
+        .hero-tag::before { content: ''; display: block; width: 24px; height: 2px; background: var(--gradient); border-radius: 2px; }
+        .hero h1 { font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: #0a0a0a; margin-bottom: 24px; }
+        .hero h1 .gradient-text { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-desc { font-size: 17px; color: #555; line-height: 1.7; max-width: 480px; margin-bottom: 40px; font-weight: 400; }
+        .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--gradient); color: white; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 8px 30px rgba(127,0,255,0.2); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(127,0,255,0.3); }
+        .btn-primary .arrow { transition: transform 0.2s; }
+        .btn-primary:hover .arrow { transform: translateX(4px); }
+        .btn-ghost { font-size: 14px; font-weight: 600; color: #555; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+        .btn-ghost:hover { color: var(--purple); }
+        .hero-visual { display: flex; justify-content: center; align-items: center; }
+        .hero-card-stack { position: relative; width: 380px; height: 400px; }
+        .flow-card { position: absolute; background: white; border-radius: 16px; padding: 20px 24px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); border: 1px solid var(--gray-border); }
+        .flow-card.card-main { width: 300px; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3; }
+        .flow-card.card-back-1 { width: 260px; top: calc(50% - 30px); left: calc(50% + 20px); transform: translateY(-50%); z-index: 2; opacity: 0.5; }
+        .flow-card.card-back-2 { width: 240px; top: calc(50% - 15px); left: calc(50% + 38px); transform: translateY(-50%); z-index: 1; opacity: 0.25; }
+        .card-label { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+        .card-title { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 16px; }
+        .flow-steps { display: flex; flex-direction: column; gap: 10px; }
+        .flow-step { display: flex; align-items: center; gap: 10px; }
+        .step-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .step-dot.active { background: linear-gradient(135deg, #007BFF, #7F00FF); box-shadow: 0 0 8px rgba(127,0,255,0.4); }
+        .step-dot.done { background: #22c55e; }
+        .step-dot.pending { background: #e5e5e5; }
+        .step-text { font-size: 13px; color: #444; font-weight: 500; }
+        .card-badge { position: absolute; top: -16px; right: -16px; background: #22c55e; color: white; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 50px; white-space: nowrap; box-shadow: 0 4px 16px rgba(34,197,94,0.3); animation: pulse-badge 2.5s infinite; }
+        @keyframes pulse-badge { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+        .floating-stat { position: absolute; background: white; border-radius: 12px; padding: 12px 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); border: 1px solid var(--gray-border); z-index: 5; }
+        .floating-stat.stat-1 { top: 20px; left: 0; animation: float-1 4s ease-in-out infinite; }
+        .floating-stat.stat-2 { bottom: 30px; right: -10px; animation: float-2 5s ease-in-out infinite; }
+        @keyframes float-1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        @keyframes float-2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+        .stat-number { font-size: 20px; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; }
+        .stat-label { font-size: 11px; color: #888; font-weight: 500; margin-top: 2px; }
+        /* SHARED */
+        .section-inner { max-width: 1180px; margin: 0 auto; }
+        .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .section-eyebrow::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gradient); }
+        .section-title { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -1px; line-height: 1.15; color: #0a0a0a; max-width: 600px; margin-bottom: 16px; }
+        .section-subtitle { font-size: 17px; color: #666; max-width: 540px; line-height: 1.7; margin-bottom: 56px; }
+        /* PROBLEM */
+        .problem-section { background: var(--gray-light); padding: 100px 24px; }
+        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .problem-card { background: white; border-radius: 16px; padding: 32px; border: 1px solid var(--gray-border); transition: transform 0.3s, box-shadow 0.3s; opacity: 0; transform: translateY(20px); }
+        .problem-card.visible { opacity: 1; transform: translateY(0); }
+        .problem-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.07); }
+        .problem-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 20px; }
+        .problem-icon.red { background: #fff0f0; }
+        .problem-icon.orange { background: #fff7ed; }
+        .problem-icon.yellow { background: #fefce8; }
+        .problem-card h3 { font-size: 16px; font-weight: 700; color: #111; margin-bottom: 10px; }
+        .problem-card p { font-size: 14px; color: #666; line-height: 1.65; }
+        /* SERVICES */
+        .services-section { padding: 100px 24px; background: white; }
+        .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 64px; }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .service-card { border-radius: 16px; padding: 36px; border: 1px solid var(--gray-border); transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; cursor: default; position: relative; overflow: hidden; opacity: 0; transform: translateY(20px); }
+        .service-card.visible { opacity: 1; transform: translateY(0); }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient); opacity: 0; transition: opacity 0.3s; }
+        .service-card:hover { border-color: rgba(127,0,255,0.2); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(127,0,255,0.07); }
+        .service-card:hover::before { opacity: 1; }
+        .service-num { font-size: 11px; font-weight: 700; color: #ccc; letter-spacing: 1px; margin-bottom: 16px; }
+        .service-card h3 { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 12px; letter-spacing: -0.3px; }
+        .service-card p { font-size: 14px; color: #666; line-height: 1.7; }
+        /* CAPABILITIES */
+        .capabilities-section { padding: 100px 24px; background: var(--gray-light); }
+        .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; }
+        .cap-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid var(--gray-border); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; opacity: 0; transform: translateY(20px); display: flex; flex-direction: column; gap: 14px; }
+        .cap-card.visible { opacity: 1; transform: translateY(0); }
+        .cap-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(127,0,255,0.07); border-color: rgba(127,0,255,0.2); }
+        .cap-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--gradient-soft); border: 1px solid rgba(127,0,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+        .cap-card h3 { font-size: 15px; font-weight: 700; color: #111; letter-spacing: -0.2px; line-height: 1.3; }
+        .cap-card p { font-size: 13px; color: #777; line-height: 1.65; flex-grow: 1; }
+        .cap-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--blue); background: rgba(0,123,255,0.07); padding: 4px 10px; border-radius: 50px; letter-spacing: 0.3px; align-self: flex-start; }
+        /* TEAM */
+        .team-section { padding: 100px 24px; background: white; }
+        .team-grid { display: flex; flex-direction: column; gap: 28px; margin-top: 56px; }
+        .team-card { display: grid; grid-template-columns: 340px 1fr; border-radius: 20px; border: 1px solid var(--gray-border); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; opacity: 0; transform: translateY(20px); background: white; }
+        .team-card.visible { opacity: 1; transform: translateY(0); }
+        .team-card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(0,0,0,0.07); }
+        .team-photo-wrap { position: relative; height: 100%; min-height: 340px; overflow: hidden; }
+        .team-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; transition: transform 0.5s ease; }
+        .team-photo--carolina { object-position: center 10%; }
+        .team-photo--josefina { object-position: center 10%; }
+        .team-card:hover .team-photo { transform: scale(1.04); }
+        .team-photo-gradient { display: none; }
+        .team-info { padding: 40px 44px; display: flex; flex-direction: column; justify-content: center; }
+        .team-role { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 10px; }
+        .team-name { font-size: 28px; font-weight: 800; color: #0a0a0a; letter-spacing: -0.8px; margin-bottom: 18px; line-height: 1.1; }
+        .team-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .team-tags span { font-size: 11px; font-weight: 600; color: var(--blue); background: rgba(0,123,255,0.07); padding: 5px 14px; border-radius: 50px; letter-spacing: 0.3px; }
+        .team-bio { font-size: 14px; color: #555; line-height: 1.8; margin-bottom: 12px; }
+        .team-bio:last-child { margin-bottom: 0; }
         @media (max-width: 768px) {
-            .capabilities-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .team-card { grid-template-columns: 1fr; }
+            .team-photo-wrap { min-height: 260px; height: 260px; }
+            .team-info { padding: 28px 24px; }
+            .team-name { font-size: 22px; }
         }
-
-        @media (max-width: 480px) {
-            .capabilities-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ─── CAPABILITIES ─── */
-        .capabilities-section {
-            padding: 100px 24px;
-            background: var(--gray-light);
-        }
-
-        .capabilities-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 56px;
-        }
-
-        .cap-card {
-            background: white;
-            border-radius: 16px;
-            padding: 28px;
-            border: 1px solid var(--gray-border);
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .cap-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .cap-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(127,0,255,0.07);
-            border-color: rgba(127,0,255,0.2);
-        }
-
-        .cap-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 12px;
-            background: var(--gradient-soft);
-            border: 1px solid rgba(127,0,255,0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            flex-shrink: 0;
-        }
-
-        .cap-card h3 {
-            font-size: 15px;
-            font-weight: 700;
-            color: #111;
-            letter-spacing: -0.2px;
-            line-height: 1.3;
-        }
-
-        .cap-card p {
-            font-size: 13px;
-            color: #777;
-            line-height: 1.65;
-            flex-grow: 1;
-        }
-
-        .cap-tag {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--blue);
-            background: rgba(0,123,255,0.07);
-            padding: 4px 10px;
-            border-radius: 50px;
-            letter-spacing: 0.3px;
-            align-self: flex-start;
-        }
-
+        /* HOW */
+        .how-section { padding: 100px 24px; background: var(--dark); color: white; position: relative; overflow: hidden; }
+        .how-section::before { content: ''; position: absolute; top: -300px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(127,0,255,0.15) 0%, transparent 70%); }
+        .how-section::after { content: ''; position: absolute; bottom: -200px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,123,255,0.1) 0%, transparent 70%); }
+        .how-inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+        .how-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: 64px; }
+        .how-section .section-eyebrow { color: rgba(0,123,255,0.9); }
+        .how-section .section-title { color: white; }
+        .steps-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .step-card { position: relative; }
+        .step-card:not(:last-child)::after { content: ''; position: absolute; top: 22px; right: -12px; width: 24px; height: 1px; background: linear-gradient(to right, rgba(127,0,255,0.4), rgba(0,123,255,0.4)); }
+        .step-number { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.5); margin-bottom: 20px; }
+        .step-card h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 10px; }
+        .step-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+        /* BEFORE/AFTER */
+        .before-after-section { padding: 100px 24px; background: white; }
+        .ba-container { max-width: 900px; margin: 56px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .ba-card { border-radius: 16px; padding: 36px; border: 1px solid var(--gray-border); }
+        .ba-card.before { background: #fafafa; }
+        .ba-card.after { background: var(--gradient-soft); border-color: rgba(127,0,255,0.15); }
+        .ba-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px; }
+        .ba-card.before .ba-label { color: #999; }
+        .ba-card.after .ba-label { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .ba-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+        .ba-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.5; }
+        .ba-card.before .ba-list li { color: #666; }
+        .ba-card.after .ba-list li { color: #333; }
+        .ba-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+        /* CTA */
+        .cta-section { padding: 100px 24px; background: var(--dark); text-align: center; position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(127,0,255,0.15) 0%, transparent 65%); }
+        .cta-inner { max-width: 660px; margin: 0 auto; position: relative; z-index: 1; }
+        .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: white; letter-spacing: -1px; line-height: 1.15; margin-bottom: 20px; }
+        .cta-section h2 span { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .cta-section p { font-size: 17px; color: rgba(255,255,255,0.6); margin-bottom: 40px; line-height: 1.7; }
+        .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); }
+        /* FOOTER */
+        footer { background: #070712; padding: 48px 24px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .footer-logo-text { font-size: 15px; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .footer-nav { display: flex; gap: 28px; }
+        .footer-nav a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+        .footer-nav a:hover { color: rgba(255,255,255,0.8); }
+        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+        /* MOBILE */
         @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            .nav-links { display: none; position: fixed; top: 68px; left: 0; right: 0; background: white; padding: 24px; flex-direction: column; gap: 20px; border-bottom: 1px solid var(--gray-border); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 15px; }
+            .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+            .hero-actions { justify-content: center; }
+            .hero-visual { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-tag { justify-content: center; }
+            .problem-grid { grid-template-columns: 1fr; }
+            .services-header { grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; }
+            .services-grid { grid-template-columns: 1fr; }
             .capabilities-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .team-photo-wrap { height: 260px; }
+            .how-header { flex-direction: column; }
+            .steps-container { grid-template-columns: 1fr 1fr; }
+            .step-card::after { display: none; }
+            .ba-container { grid-template-columns: 1fr; }
+            .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
+            .footer-nav { flex-wrap: wrap; justify-content: center; gap: 16px; }
         }
         @media (max-width: 480px) {
+            .steps-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.9rem; }
             .capabilities-grid { grid-template-columns: 1fr; }
-        }
-
-        /* ─── HOW IT WORKS ─── */
-        .how-section {
-            padding: 100px 24px;
-            background: var(--dark);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .how-section::before {
-            content: '';
-            position: absolute;
-            top: -300px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(127,0,255,0.15) 0%, transparent 70%);
-        }
-
-        .how-section::after {
-            content: '';
-            position: absolute;
-            bottom: -200px;
-            left: -100px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0,123,255,0.1) 0%, transparent 70%);
-        }
-
-        .how-inner {
-            max-width: 1180px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .how-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-            margin-bottom: 64px;
-        }
-
-        .how-section .section-eyebrow {
-            color: rgba(0,123,255,0.9);
-        }
-
-        .how-section .section-title {
-            color: white;
-        }
-
-        .how-section .section-subtitle {
-            color: rgba(255,255,255,0.6);
-        }
-
-        .steps-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .step-card {
-            position: relative;
-        }
-
-        .step-card:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 22px;
-            right: -12px;
-            width: 24px;
-            height: 1px;
-            background: linear-gradient(to right, rgba(127,0,255,0.4), rgba(0,123,255,0.4));
-        }
-
-        .step-number {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 20px;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .step-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .step-card p {
-            font-size: 13px;
-            color: rgba(255,255,255,0.55);
-            line-height: 1.65;
-        }
-
-        /* ─── BEFORE/AFTER ─── */
-        .before-after-section {
-            padding: 100px 24px;
-            background: white;
-        }
-
-        .ba-container {
-            max-width: 900px;
-            margin: 56px auto 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-        }
-
-        .ba-card {
-            border-radius: 16px;
-            padding: 36px;
-            border: 1px solid var(--gray-border);
-        }
-
-        .ba-card.before {
-            background: #fafafa;
-        }
-
-        .ba-card.after {
-            background: var(--gradient-soft);
-            border-color: rgba(127,0,255,0.15);
-        }
-
-        .ba-label {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-
-        .ba-card.before .ba-label {
-            color: #999;
-        }
-
-        .ba-card.after .ba-label {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .ba-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .ba-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .ba-card.before .ba-list li {
-            color: #666;
-        }
-
-        .ba-card.after .ba-list li {
-            color: #333;
-        }
-
-        .ba-icon {
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        /* ─── CTA ─── */
-        .cta-section {
-            padding: 100px 24px;
-            background: var(--dark);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 700px;
-            height: 400px;
-            background: radial-gradient(ellipse, rgba(127,0,255,0.15) 0%, transparent 65%);
-        }
-
-        .cta-inner {
-            max-width: 660px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-section h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            color: white;
-            letter-spacing: -1px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .cta-section h2 span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .cta-section p {
-            font-size: 17px;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        .cta-note {
-            margin-top: 20px;
-            font-size: 13px;
-            color: rgba(255,255,255,0.35);
-        }
-
-        /* ─── FOOTER ─── */
-        footer {
-            background: #070712;
-            padding: 48px 24px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .footer-inner {
-            max-width: 1180px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .footer-logo-text {
-            font-size: 15px;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .footer-nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        .footer-nav a {
-            font-size: 13px;
-            color: rgba(255,255,255,0.4);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-nav a:hover {
-            color: rgba(255,255,255,0.8);
-        }
-
-        .footer-copy {
-            font-size: 12px;
-            color: rgba(255,255,255,0.25);
-        }
-
-        /* ─── MOBILE MENU ─── */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 68px;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 24px;
-                flex-direction: column;
-                gap: 20px;
-                border-bottom: 1px solid var(--gray-border);
-                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links a {
-                font-size: 15px;
-            }
-
-            .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
-                text-align: center;
-            }
-
-            .hero-actions {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .problem-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-header {
-                grid-template-columns: 1fr;
-                gap: 0;
-                margin-bottom: 40px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .how-header {
-                flex-direction: column;
-            }
-
-            .steps-container {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .step-card::after {
-                display: none;
-            }
-
-            .ba-container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                text-align: center;
-                gap: 16px;
-            }
-
-            .footer-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 16px;
-            }
-
-            .hero-tag {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .steps-container {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 1.9rem;
-            }
         }
     </style>
 </head>
 <body>
-
-<!-- ─── HEADER ─── -->
+<!-- HEADER -->
 <header id="main-header">
     <nav>
         <a href="#inicio" class="logo">
@@ -1293,29 +260,23 @@
         <ul class="nav-links" id="nav-links">
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#como-funciona">Proceso</a></li>
+            <li><a href="#quienes-somos">Nosotros</a></li>
             <li><a href="#contacto" class="nav-cta">Hablemos →</a></li>
         </ul>
         <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
     </nav>
 </header>
-
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <section id="inicio" class="hero">
     <div class="hero-inner">
         <div class="hero-content">
             <div class="hero-tag">Automatización con IA</div>
             <h1>Tu negocio ya vende.<br>Pero el caos operativo<br>te cuesta <span class="gradient-text">ventas reales.</span></h1>
-            <p class="hero-desc">
-                Diseñamos sistemas automáticos que responden consultas, organizan clientes y hacen seguimiento — para que puedas enfocarte en escalar, no en responder mensajes.
-            </p>
+            <p class="hero-desc">Diseñamos sistemas automáticos que responden consultas, organizan clientes y hacen seguimiento — para que puedas enfocarte en escalar, no en responder mensajes.</p>
             <div class="hero-actions">
-                <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary">
-                    Analizar mi negocio <span class="arrow">→</span>
-                </a>
+                <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary">Analizar mi negocio <span class="arrow">→</span></a>
                 <a href="#como-funciona" class="btn-ghost">Ver cómo funciona ↓</a>
             </div>
         </div>
@@ -1328,42 +289,20 @@
                     <div class="card-label">Sistema de ventas</div>
                     <div class="card-title">Proceso automatizado</div>
                     <div class="flow-steps">
-                        <div class="flow-step">
-                            <div class="step-dot done"></div>
-                            <span class="step-text">Cliente consulta por cualquier canal</span>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-dot done"></div>
-                            <span class="step-text">Respuesta automática inmediata</span>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-dot active"></div>
-                            <span class="step-text">Lead segmentado en el CRM</span>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-dot pending"></div>
-                            <span class="step-text">Seguimiento en 24hs</span>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-dot pending"></div>
-                            <span class="step-text">Venta concretada</span>
-                        </div>
+                        <div class="flow-step"><div class="step-dot done"></div><span class="step-text">Cliente consulta por cualquier canal</span></div>
+                        <div class="flow-step"><div class="step-dot done"></div><span class="step-text">Respuesta automática inmediata</span></div>
+                        <div class="flow-step"><div class="step-dot active"></div><span class="step-text">Lead segmentado en el CRM</span></div>
+                        <div class="flow-step"><div class="step-dot pending"></div><span class="step-text">Seguimiento en 24hs</span></div>
+                        <div class="flow-step"><div class="step-dot pending"></div><span class="step-text">Venta concretada</span></div>
                     </div>
                 </div>
-                <div class="floating-stat stat-1">
-                    <div class="stat-number">0 min</div>
-                    <div class="stat-label">Tiempo de respuesta</div>
-                </div>
-                <div class="floating-stat stat-2">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Sin seguimiento manual</div>
-                </div>
+                <div class="floating-stat stat-1"><div class="stat-number">0 min</div><div class="stat-label">Tiempo de respuesta</div></div>
+                <div class="floating-stat stat-2"><div class="stat-number">100%</div><div class="stat-label">Sin seguimiento manual</div></div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- ─── PROBLEM ─── -->
+<!-- PROBLEM -->
 <section class="problem-section">
     <div class="section-inner">
         <div class="section-eyebrow">El problema</div>
@@ -1388,8 +327,7 @@
         </div>
     </div>
 </section>
-
-<!-- ─── SERVICES ─── -->
+<!-- SERVICES -->
 <section id="servicios" class="services-section">
     <div class="section-inner">
         <div class="services-header">
@@ -1425,83 +363,26 @@
         </div>
     </div>
 </section>
-
-<!-- ─── CAPABILITIES ─── -->
+<!-- CAPABILITIES -->
 <section class="capabilities-section">
     <div class="section-inner">
         <div class="section-eyebrow">Capacidades</div>
         <h2 class="section-title">Todo lo que podemos implementar en tu negocio</h2>
         <p class="section-subtitle">Cada solución está diseñada para eliminar trabajo manual, reducir errores y darte tiempo para enfocarte en lo que realmente hace crecer tu negocio.</p>
         <div class="capabilities-grid">
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">🎯</div>
-                <h3>CRM inteligente</h3>
-                <p>Todos tus contactos organizados, etiquetados y segmentados automáticamente. Sabés en qué etapa está cada cliente sin revisar nada manualmente.</p>
-                <span class="cap-tag">Gestión de clientes</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">📧</div>
-                <h3>Campañas de email marketing</h3>
-                <p>Secuencias automáticas que se envían en el momento justo según el comportamiento de cada cliente. El mensaje correcto, a la persona correcta, sin intervención.</p>
-                <span class="cap-tag">Email automation</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">🔔</div>
-                <h3>Recordatorios automáticos</h3>
-                <p>Notificaciones por WhatsApp, email o SMS para turnos, pagos, vencimientos o cualquier evento clave. Cero seguimiento manual de tu parte.</p>
-                <span class="cap-tag">Notificaciones</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">📅</div>
-                <h3>Calendarios y agendamiento</h3>
-                <p>Tus clientes agendan solos en los horarios disponibles. Las confirmaciones, recordatorios y reprogramaciones se gestionan solas.</p>
-                <span class="cap-tag">Scheduling</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">🤖</div>
-                <h3>Agentes IA y chatbots</h3>
-                <p>Asistentes inteligentes que responden consultas, califican leads y guían al cliente en el proceso de compra, disponibles las 24 horas, todos los días.</p>
-                <span class="cap-tag">Inteligencia Artificial</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">🔄</div>
-                <h3>Seguimiento automático de leads</h3>
-                <p>Cuando un cliente no responde, el sistema hace el seguimiento por vos. Secuencias inteligentes que reactivan conversaciones sin que tengas que recordarlo.</p>
-                <span class="cap-tag">Lead nurturing</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">🌐</div>
-                <h3>Landing pages y sitios web</h3>
-                <p>Páginas diseñadas para convertir, conectadas directamente a tu sistema de automatización. Cada lead que llega entra solo al flujo correcto.</p>
-                <span class="cap-tag">Diseño web</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">📊</div>
-                <h3>Pipelines de venta</h3>
-                <p>Visualizás todo tu proceso comercial en un tablero claro. Sabés cuántos leads tenés, en qué etapa están y cuánto representan en facturación potencial.</p>
-                <span class="cap-tag">Ventas</span>
-            </div>
-
-            <div class="cap-card" data-animate>
-                <div class="cap-icon">💬</div>
-                <h3>Automatización multicanal</h3>
-                <p>Conectamos WhatsApp, Instagram, Facebook, TikTok, LinkedIn, X y email en un solo sistema. Todas las conversaciones centralizadas, con respuestas automáticas en cada canal.</p>
-                <span class="cap-tag">Omnicanal</span>
-            </div>
-
+            <div class="cap-card" data-animate><div class="cap-icon">🎯</div><h3>CRM inteligente</h3><p>Todos tus contactos organizados, etiquetados y segmentados automáticamente. Sabés en qué etapa está cada cliente sin revisar nada manualmente.</p><span class="cap-tag">Gestión de clientes</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">📧</div><h3>Campañas de email marketing</h3><p>Secuencias automáticas que se envían en el momento justo según el comportamiento de cada cliente. El mensaje correcto, a la persona correcta, sin intervención.</p><span class="cap-tag">Email automation</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">🔔</div><h3>Recordatorios automáticos</h3><p>Notificaciones por WhatsApp, email o SMS para turnos, pagos, vencimientos o cualquier evento clave. Cero seguimiento manual de tu parte.</p><span class="cap-tag">Notificaciones</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">📅</div><h3>Calendarios y agendamiento</h3><p>Tus clientes agendan solos en los horarios disponibles. Las confirmaciones, recordatorios y reprogramaciones se gestionan solas.</p><span class="cap-tag">Scheduling</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">🤖</div><h3>Agentes IA y chatbots</h3><p>Asistentes inteligentes que responden consultas, califican leads y guían al cliente en el proceso de compra, disponibles las 24 horas, todos los días.</p><span class="cap-tag">Inteligencia Artificial</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">🔄</div><h3>Seguimiento automático de leads</h3><p>Cuando un cliente no responde, el sistema hace el seguimiento por vos. Secuencias inteligentes que reactivan conversaciones sin que tengas que recordarlo.</p><span class="cap-tag">Lead nurturing</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">🌐</div><h3>Landing pages y sitios web</h3><p>Páginas diseñadas para convertir, conectadas directamente a tu sistema de automatización. Cada lead que llega entra solo al flujo correcto.</p><span class="cap-tag">Diseño web</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">📊</div><h3>Pipelines de venta</h3><p>Visualizás todo tu proceso comercial en un tablero claro. Sabés cuántos leads tenés, en qué etapa están y cuánto representan en facturación potencial.</p><span class="cap-tag">Ventas</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">💬</div><h3>Automatización multicanal</h3><p>Conectamos WhatsApp, Instagram, Facebook, TikTok, LinkedIn, X y email en un solo sistema. Todas las conversaciones centralizadas, con respuestas automáticas en cada canal.</p><span class="cap-tag">Omnicanal</span></div>
         </div>
     </div>
 </section>
-
-<!-- ─── HOW IT WORKS ─── -->
+<!-- HOW IT WORKS -->
 <section id="como-funciona" class="how-section">
     <div class="how-inner">
         <div class="how-header">
@@ -1512,31 +393,14 @@
             <p style="font-size: 16px; color: rgba(255,255,255,0.55); max-width: 380px; line-height: 1.7; margin-top: 8px;">Implementación en 2 a 4 semanas según complejidad. Sin tecnicismos, sin complejidades innecesarias.</p>
         </div>
         <div class="steps-container">
-            <div class="step-card">
-                <div class="step-number">01</div>
-                <h3>Análisis del negocio</h3>
-                <p>Revisamos cómo llegan tus consultas, cómo las gestionás hoy y dónde se están perdiendo oportunidades.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">02</div>
-                <h3>Diseño del sistema</h3>
-                <p>Definimos qué automatizar primero según impacto real. Sin automatizar por automatizar — con foco en resultados.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">03</div>
-                <h3>Implementación</h3>
-                <p>Construimos y conectamos el sistema a tus canales de venta. Te entregamos algo que funciona desde el primer día.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">04</div>
-                <h3>Optimización continua</h3>
-                <p>Ajustamos el proceso según los resultados reales. El sistema mejora con el tiempo y con tu negocio.</p>
-            </div>
+            <div class="step-card"><div class="step-number">01</div><h3>Análisis del negocio</h3><p>Revisamos cómo llegan tus consultas, cómo las gestionás hoy y dónde se están perdiendo oportunidades.</p></div>
+            <div class="step-card"><div class="step-number">02</div><h3>Diseño del sistema</h3><p>Definimos qué automatizar primero según impacto real. Sin automatizar por automatizar — con foco en resultados.</p></div>
+            <div class="step-card"><div class="step-number">03</div><h3>Implementación</h3><p>Construimos y conectamos el sistema a tus canales de venta. Te entregamos algo que funciona desde el primer día.</p></div>
+            <div class="step-card"><div class="step-number">04</div><h3>Optimización continua</h3><p>Ajustamos el proceso según los resultados reales. El sistema mejora con el tiempo y con tu negocio.</p></div>
         </div>
     </div>
 </section>
-
-<!-- ─── BEFORE / AFTER ─── -->
+<!-- BEFORE/AFTER -->
 <section class="before-after-section">
     <div class="section-inner" style="text-align: center;">
         <div class="section-eyebrow" style="justify-content: center;">Antes y después</div>
@@ -1545,100 +409,82 @@
             <div class="ba-card before">
                 <div class="ba-label">Sin sistema</div>
                 <ul class="ba-list">
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/>
-                            <path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Todo depende de que vos respondas manualmente
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/>
-                            <path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Seguimiento irregular o que no existe
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/>
-                            <path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Clientes que se enfrían y desaparecen
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/>
-                            <path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Información dispersa, sin visión de negocio
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/>
-                            <path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Imposible escalar sin contratar más gente
-                    </li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>Todo depende de que vos respondas manualmente</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>Seguimiento irregular o que no existe</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>Clientes que se enfrían y desaparecen</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>Información dispersa, sin visión de negocio</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>Imposible escalar sin contratar más gente</li>
                 </ul>
             </div>
             <div class="ba-card after">
                 <div class="ba-label">Con Baires IA Lab</div>
                 <ul class="ba-list">
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/>
-                            <path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Respuestas inmediatas a toda hora sin intervención
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/>
-                            <path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Seguimiento automático sin que nadie lo gestione
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/>
-                            <path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Clientes organizados y proceso de venta claro
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/>
-                            <path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Visión completa de dónde está cada oportunidad
-                    </li>
-                    <li>
-                        <svg class="ba-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/>
-                            <path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Negocio que escala sin caos operativo
-                    </li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Respuestas inmediatas a toda hora sin intervención</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Seguimiento automático sin que nadie lo gestione</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Clientes organizados y proceso de venta claro</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Visión completa de dónde está cada oportunidad</li>
+                    <li><svg class="ba-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(127,0,255,0.1)" stroke="rgba(127,0,255,0.3)" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#7F00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Negocio que escala sin caos operativo</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-
-<!-- ─── CTA ─── -->
+<!-- QUIÉNES SOMOS -->
+<section id="quienes-somos" class="team-section">
+    <div class="section-inner">
+        <div class="section-eyebrow">Quiénes somos</div>
+        <h2 class="section-title">El equipo detrás de Baires IA Lab</h2>
+        <p class="section-subtitle">Dos especialistas que combinan tecnología, automatización y comunicación para construir sistemas que realmente funcionan.</p>
+        <div class="team-grid">
+            <div class="team-card" data-animate>
+                <div class="team-photo-wrap">
+                    <img src="archivos/Chicasentec-436-2.jpg" alt="Carolina Bernasconi" class="team-photo team-photo--carolina">
+                    <div class="team-photo-gradient"></div>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Co-fundadora</div>
+                    <h3 class="team-name">Carolina Bernasconi</h3>
+                    <div class="team-tags">
+                        <span>Automatización</span>
+                        <span>Integraciones</span>
+                        <span>CRM</span>
+                        <span>Chatbots</span>
+                    </div>
+                    <p class="team-bio">Especialista en automatización de procesos y sistemas de ventas digitales, con trayectoria en desarrollo de software, testing e integraciones técnicas. No solo diseña estrategias — las implementa. Configura CRMs, construye chatbots y arma flujos en ManyChat, GoHighLevel y WhatsApp para que cada consulta se convierta en una oportunidad real de venta.</p>
+                    <p class="team-bio">Trabajó con emprendedores y negocios en crecimiento en distintos países, combinando lógica técnica con foco en resultados comerciales. Hoy acompaña a negocios que ya venden a ordenar y automatizar su operación para escalar de verdad.</p>
+                </div>
+            </div>
+            <div class="team-card" data-animate>
+                <div class="team-photo-wrap">
+                    <img src="archivos/WhatsApp Image 2026-03-10 at 21.17.25.jpeg" alt="Josefina Obejero Paz" class="team-photo team-photo--josefina">
+                    <div class="team-photo-gradient"></div>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Co-fundadora</div>
+                    <h3 class="team-name">Josefina Obejero Paz</h3>
+                    <div class="team-tags">
+                        <span>Audiovisual</span>
+                        <span>After Effects</span>
+                        <span>Contenido IA</span>
+                        <span>Motion Graphics</span>
+                    </div>
+                    <p class="team-bio">Especialista en producción audiovisual y creación de contenido digital, con años de experiencia en edición de video, motion graphics con After Effects y contenido potenciado con inteligencia artificial. Construyó una visión sólida de cómo el contenido puede ser una herramienta estratégica de crecimiento, no solo estética.</p>
+                    <p class="team-bio">En Baires IA Lab es quien da vida visual a los sistemas: desde los materiales de comunicación hasta el contenido que acompaña cada etapa del proceso de venta automatizado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA -->
 <section id="contacto" class="cta-section">
     <div class="cta-inner">
         <h2>¿Tu negocio ya vende<br>pero el proceso <span>puede mejorar</span>?</h2>
         <p>Contanos cómo gestionás hoy tus consultas y vemos juntos si tiene sentido implementar un sistema. Sin compromiso.</p>
-        <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary" style="font-size: 16px; padding: 18px 40px;">
-            Completar formulario <span class="arrow">→</span>
-        </a>
+        <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary" style="font-size: 16px; padding: 18px 40px;">Completar formulario <span class="arrow">→</span></a>
         <p class="cta-note">Respondemos en menos de 24 horas hábiles</p>
     </div>
 </section>
-
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-inner">
         <a href="#inicio" class="footer-logo">
@@ -1648,42 +494,24 @@
         <nav class="footer-nav">
             <a href="#servicios">Servicios</a>
             <a href="#como-funciona">Proceso</a>
+            <a href="#quienes-somos">Nosotros</a>
             <a href="#contacto">Contacto</a>
         </nav>
         <p class="footer-copy">© 2025 Baires IA Lab</p>
     </div>
 </footer>
-
 <!-- GHL Chatbot -->
-<script 
-  src="https://beta.leadconnectorhq.com/loader.js"  
-  data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
-  data-widget-id="695a601de056fe5886216ce3">
-</script>
-
+<script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="695a601de056fe5886216ce3"></script>
 <script>
-    // Header scroll
     const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Mobile menu
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
     const toggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-
-    // Close menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Scroll animations
+    toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+    navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => navLinks.classList.remove('open')); });
     const animateEls = document.querySelectorAll('[data-animate]');
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const delay = Array.from(entry.target.parentElement.children).indexOf(entry.target) * 100;
                 setTimeout(() => {
@@ -1694,7 +522,6 @@
             }
         });
     }, { threshold: 0.1 });
-
     animateEls.forEach(el => observer.observe(el));
 </script>
 </body>

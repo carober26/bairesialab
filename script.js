@@ -1,6 +1,8 @@
 // Script para manejar navegación y funcionalidad del sitio
 
 // Efecto de scroll para la navegación
+
+
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     const floatingLogo = document.querySelector('.floating-logo');

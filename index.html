@@ -84,6 +84,17 @@
         .btn-primary:hover .arrow { transform: translateX(4px); }
         .btn-ghost { font-size: 14px; font-weight: 600; color: #555; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
         .btn-ghost:hover { color: var(--purple); }
+        .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--purple); padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none; border: 2px solid var(--purple); transition: background 0.2s, color 0.2s, transform 0.2s; }
+        .btn-secondary:hover { background: var(--purple); color: white; transform: translateY(-2px); }
+        .btn-outline-white { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: white; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+        .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+        /* CTA CALL MINI */
+        .cta-call-strip { padding: 56px 24px; background: var(--dark); text-align: center; }
+        .cta-call-strip h3 { font-size: 22px; font-weight: 700; color: white; margin-bottom: 10px; letter-spacing: -0.3px; }
+        .cta-call-strip p { font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+        .cta-call-strip .btn-primary { font-size: 15px; padding: 14px 32px; }
+        /* CTA DUAL */
+        .cta-dual { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
         .hero-visual { display: flex; justify-content: center; align-items: center; }
         .hero-card-stack { position: relative; width: 380px; height: 400px; }
         .flow-card { position: absolute; background: white; border-radius: 16px; padding: 20px 24px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); border: 1px solid var(--gray-border); }
@@ -307,7 +318,7 @@
             <p class="hero-desc">Diseñamos sistemas automáticos que responden consultas, organizan clientes y hacen seguimiento — para que puedas enfocarte en escalar, no en responder mensajes.</p>
             <div class="hero-actions">
                 <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary">Analizar mi negocio <span class="arrow">→</span></a>
-                <a href="#como-funciona" class="btn-ghost">Ver cómo funciona ↓</a>
+                <a href="https://calendly.com/bairesialab" target="_blank" class="btn-secondary">Agendá tu call de 15 min</a>
             </div>
         </div>
         <div class="hero-visual">
@@ -589,12 +600,21 @@
         </div>
     </div>
 </section>
+<!-- CALL STRIP -->
+<section class="cta-call-strip">
+    <h3>¿Preferís hablar directo?</h3>
+    <p>Agendá una llamada de 15 minutos sin costo. Te contamos cómo podría funcionar para tu negocio.</p>
+    <a href="https://link.bairesialab.com/widget/bookings/baires-ia-lab" target="_blank" class="btn-primary">📞 Agendá tu call de 15 min <span class="arrow">→</span></a>
+</section>
 <!-- CTA -->
 <section id="contacto" class="cta-section">
     <div class="cta-inner">
         <h2>¿Tu negocio ya vende<br>pero el proceso <span>puede mejorar</span>?</h2>
-        <p>Contanos cómo gestionás hoy tus consultas y vemos juntos si tiene sentido implementar un sistema. Sin compromiso.</p>
-        <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary" style="font-size: 16px; padding: 18px 40px;">Completar formulario <span class="arrow">→</span></a>
+        <p>Elegí cómo preferís arrancarlo. Sin compromiso.</p>
+        <div class="cta-dual">
+            <a href="https://calendly.com/bairesialab" target="_blank" class="btn-primary" style="font-size: 16px; padding: 18px 40px;">📞 Agendá tu call de 15 min <span class="arrow">→</span></a>
+            <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-outline-white" style="font-size: 16px; padding: 18px 40px;">Completar formulario</a>
+        </div>
         <p class="cta-note">Respondemos en menos de 24 horas hábiles</p>
     </div>
 </section>

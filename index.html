@@ -263,8 +263,13 @@
         .testimonial-role { font-size: 12px; color: #999; margin-top: 2px; }
         .testimonial-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--blue); background: rgba(0,123,255,0.07); padding: 3px 10px; border-radius: 50px; margin-top: 4px; }
         /* RISK BADGE */
-        .risk-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 24px; }
-        .risk-badge::before { content: '🔒'; font-size: 14px; }
+        .risk-badge { display: inline-flex; align-items: center; gap: 20px; margin-top: 36px; padding: 14px 28px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); }
+        .risk-badge-item { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.75); }
+        .risk-badge-item::before { font-size: 14px; }
+        .risk-badge-item.lock::before { content: '🔒'; }
+        .risk-badge-item.gift::before { content: '🎁'; }
+        .risk-badge-item.calendar::before { content: '📅'; }
+        .risk-badge-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
         /* STATS */
         .stats-section { padding: 72px 24px; background: var(--gray-light); border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); }
         .stats-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 0; }
@@ -373,7 +378,7 @@
         <div class="hero-content">
             <div class="hero-tag">Automatización con IA</div>
             <h1>Tu negocio ya vende.<br>Pero el caos operativo<br>te cuesta <span class="gradient-text">ventas reales.</span></h1>
-            <p class="hero-desc">Diseñamos sistemas automáticos que responden consultas, organizan clientes y hacen seguimiento — para que puedas enfocarte en escalar, no en responder mensajes.</p>
+            <p class="hero-desc">Implementamos la infraestructura que hace que tu negocio funcione aunque vos no estés — sin contratar más gente, sin más horas, sin más caos.</p>
             <div class="hero-actions">
                 <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary">Analizar mi negocio <span class="arrow">→</span></a>
                 <a href="https://link.bairesialab.com/widget/bookings/baires-ia-lab" target="_blank" class="btn-secondary">Agendá tu call de 15 min</a>
@@ -434,7 +439,7 @@
         </div>
         <div class="inaction-callout">
             <div class="inaction-pct">78%</div>
-            <p class="inaction-text"><strong>de los clientes elige al primero que le responde.</strong> Sin un sistema automático, cada hora que tardás en contestar es una oportunidad que se va a la competencia — para siempre.</p>
+            <p class="inaction-text"><strong>de las ventas que se pierden no son por precio.</strong> Son porque no respondiste primero. En nuestra experiencia, cada hora sin respuesta es una oportunidad que se va a la competencia — y no vuelve.</p>
         </div>
     </div>
 </section>
@@ -442,18 +447,18 @@
 <section class="stats-section">
     <div class="stats-inner">
         <div class="stat-item">
-            <span class="stat-number">+50</span>
-            <span class="stat-label">Automatizaciones implementadas</span>
+            <span class="stat-number">+40%</span>
+            <span class="stat-label">Más conversiones en promedio<br>en los primeros 60 días</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-            <span class="stat-number">+100</span>
-            <span class="stat-label">Clientes activos</span>
+            <span class="stat-number">1 mes</span>
+            <span class="stat-label">Tiempo promedio para<br>recuperar la inversión</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
             <span class="stat-number">24/7</span>
-            <span class="stat-label">Disponibilidad de los sistemas</span>
+            <span class="stat-label">El sistema trabaja aunque<br>vos no estés</span>
         </div>
     </div>
 </section>
@@ -690,13 +695,13 @@
                     <div class="team-role">Co-fundadora</div>
                     <h3 class="team-name">Josefina Obejero Paz</h3>
                     <div class="team-tags">
-                        <span>Audiovisual</span>
-                        <span>After Effects</span>
+                        <span>Comunicación estratégica</span>
                         <span>Contenido IA</span>
-                        <span>Motion Graphics</span>
+                        <span>Experiencia de cliente</span>
+                        <span>Identidad de marca</span>
                     </div>
-                    <p class="team-bio">Especialista en producción audiovisual y creación de contenido digital, con años de experiencia en edición de video, motion graphics con After Effects y contenido potenciado con inteligencia artificial. Construyó una visión sólida de cómo el contenido puede ser una herramienta estratégica de crecimiento, no solo estética.</p>
-                    <p class="team-bio">En Baires IA Lab es quien da vida visual a los sistemas: desde los materiales de comunicación hasta el contenido que acompaña cada etapa del proceso de venta automatizado.</p>
+                    <p class="team-bio">Especialista en comunicación estratégica y experiencia de cliente, con foco en cómo los negocios se presentan en cada punto de contacto con sus prospectos. Sabe que un sistema automatizado sin la comunicación correcta es solo tecnología — y que la diferencia entre un lead frío y una venta cerrada muchas veces está en el mensaje.</p>
+                    <p class="team-bio">En Baires IA Lab diseña la voz de cada automatización: los mensajes del chatbot, las secuencias de seguimiento, el contenido que acompaña al cliente desde el primer contacto hasta la compra. Hace que el sistema suene humano aunque trabaje solo.</p>
                 </div>
             </div>
         </div>
@@ -770,8 +775,8 @@
 <!-- CTA -->
 <section id="contacto" class="cta-section">
     <div class="cta-inner" style="max-width: 860px;">
-        <h2>¿Tu negocio ya vende<br>pero el proceso <span>puede mejorar</span>?</h2>
-        <p>Elegí cómo querés empezar. Sin compromiso.</p>
+        <h2>Cada semana sin sistema<br>es una semana de ventas<br>que <span>no volvés a recuperar.</span></h2>
+        <p>Hablemos 15 minutos y te decimos exactamente qué se puede automatizar en tu negocio — sin costo, sin compromiso.</p>
         <div class="cta-paths">
             <div class="cta-path cta-path--call">
                 <div class="cta-path-icon">📞</div>
@@ -788,7 +793,13 @@
                 <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-outline-white">Completar formulario <span class="arrow">→</span></a>
             </div>
         </div>
-        <p class="risk-badge">Sin compromiso · Diagnóstico gratuito · Sin contratos largos</p>
+        <div class="risk-badge">
+            <span class="risk-badge-item lock">Sin compromiso</span>
+            <span class="risk-badge-sep"></span>
+            <span class="risk-badge-item gift">Diagnóstico gratuito</span>
+            <span class="risk-badge-sep"></span>
+            <span class="risk-badge-item calendar">Sin contratos largos</span>
+        </div>
     </div>
 </section>
 <!-- FOOTER -->

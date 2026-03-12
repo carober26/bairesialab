@@ -216,6 +216,55 @@
         .ba-card.before .ba-list li { color: #666; }
         .ba-card.after .ba-list li { color: #333; }
         .ba-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+        /* HERO PROOF */
+        .hero-proof { display: flex; align-items: center; gap: 10px; margin-top: 20px; }
+        .proof-dots { display: flex; gap: -4px; }
+        .proof-dot { width: 28px; height: 28px; border-radius: 50%; background: var(--gradient); border: 2px solid white; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-left: -6px; }
+        .proof-dot:first-child { margin-left: 0; }
+        .hero-proof-text { font-size: 13px; color: #777; font-weight: 500; }
+        .hero-proof-text strong { color: #333; }
+        /* INACTION CALLOUT */
+        .inaction-callout { margin-top: 48px; background: white; border-radius: 16px; padding: 28px 32px; border-left: 4px solid var(--purple); display: flex; align-items: center; gap: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); }
+        .inaction-pct { font-size: 3rem; font-weight: 800; letter-spacing: -2px; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; flex-shrink: 0; }
+        .inaction-text { font-size: 15px; color: #444; line-height: 1.65; }
+        .inaction-text strong { color: #111; }
+        /* PARA VOS */
+        .paravos-section { padding: 100px 24px; background: var(--dark); position: relative; overflow: hidden; }
+        .paravos-section::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(127,0,255,0.12) 0%, transparent 70%); pointer-events: none; }
+        .paravos-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+        .paravos-left .section-eyebrow { color: rgba(0,123,255,0.9); }
+        .paravos-left .section-title { color: white; max-width: 420px; }
+        .paravos-left p { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-top: 16px; }
+        .paravos-list { display: flex; flex-direction: column; gap: 16px; }
+        .paravos-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px 24px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: background 0.2s, border-color 0.2s; }
+        .paravos-item:hover { background: rgba(255,255,255,0.07); border-color: rgba(127,0,255,0.3); }
+        .paravos-check { width: 22px; height: 22px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 11px; color: white; font-weight: 700; }
+        .paravos-item p { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0; }
+        /* INTEGRATIONS */
+        .integrations-strip { padding: 56px 24px; background: white; border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); text-align: center; }
+        .integrations-label { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #bbb; margin-bottom: 28px; }
+        .integrations-logos { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; max-width: 860px; margin: 0 auto; }
+        .int-pill { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: #555; background: var(--gray-light); border: 1px solid var(--gray-border); border-radius: 50px; padding: 8px 18px; transition: all 0.2s; }
+        .int-pill:hover { border-color: rgba(127,0,255,0.3); color: var(--purple); background: rgba(127,0,255,0.04); }
+        .int-pill span { font-size: 16px; }
+        /* TESTIMONIALS */
+        .testimonials-section { padding: 100px 24px; background: var(--gray-light); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+        .testimonial-card { background: white; border-radius: 20px; padding: 36px; border: 1px solid var(--gray-border); display: flex; flex-direction: column; gap: 20px; transition: transform 0.3s, box-shadow 0.3s; }
+        .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(127,0,255,0.08); }
+        .testimonial-stars { display: flex; gap: 3px; }
+        .testimonial-stars span { color: #f59e0b; font-size: 15px; }
+        .testimonial-quote { font-size: 15px; color: #444; line-height: 1.75; flex: 1; font-style: italic; }
+        .testimonial-quote::before { content: '"'; }
+        .testimonial-quote::after { content: '"'; }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--gray-border); }
+        .testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: white; flex-shrink: 0; }
+        .testimonial-name { font-size: 14px; font-weight: 700; color: #111; }
+        .testimonial-role { font-size: 12px; color: #999; margin-top: 2px; }
+        .testimonial-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--blue); background: rgba(0,123,255,0.07); padding: 3px 10px; border-radius: 50px; margin-top: 4px; }
+        /* RISK BADGE */
+        .risk-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 24px; }
+        .risk-badge::before { content: '🔒'; font-size: 14px; }
         /* STATS */
         .stats-section { padding: 72px 24px; background: var(--gray-light); border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); }
         .stats-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 0; }
@@ -286,6 +335,10 @@
             .stat-item { padding: 0; }
             .faq-question { font-size: 14px; }
             .cta-paths { grid-template-columns: 1fr; }
+            .paravos-inner { grid-template-columns: 1fr; gap: 40px; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .inaction-callout { flex-direction: column; gap: 12px; text-align: center; }
+            .integrations-logos { gap: 8px; }
         }
         @media (max-width: 480px) {
             .steps-container { grid-template-columns: 1fr; }
@@ -324,6 +377,14 @@
             <div class="hero-actions">
                 <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-primary">Analizar mi negocio <span class="arrow">→</span></a>
                 <a href="https://link.bairesialab.com/widget/bookings/baires-ia-lab" target="_blank" class="btn-secondary">Agendá tu call de 15 min</a>
+            </div>
+            <div class="hero-proof">
+                <div class="proof-dots">
+                    <div class="proof-dot">✓</div>
+                    <div class="proof-dot">✓</div>
+                    <div class="proof-dot">✓</div>
+                </div>
+                <span class="hero-proof-text"><strong>+100 negocios</strong> ya automatizaron su proceso de ventas</span>
             </div>
         </div>
         <div class="hero-visual">
@@ -371,6 +432,29 @@
                 <p>El cliente preguntó, quedó interesado, y nadie hizo seguimiento. La venta no se perdió por falta de interés — se perdió por falta de proceso.</p>
             </div>
         </div>
+        <div class="inaction-callout">
+            <div class="inaction-pct">78%</div>
+            <p class="inaction-text"><strong>de los clientes elige al primero que le responde.</strong> Sin un sistema automático, cada hora que tardás en contestar es una oportunidad que se va a la competencia — para siempre.</p>
+        </div>
+    </div>
+</section>
+<!-- STATS -->
+<section class="stats-section">
+    <div class="stats-inner">
+        <div class="stat-item">
+            <span class="stat-number">+50</span>
+            <span class="stat-label">Automatizaciones implementadas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-number">+100</span>
+            <span class="stat-label">Clientes activos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Disponibilidad de los sistemas</span>
+        </div>
     </div>
 </section>
 <!-- SERVICES -->
@@ -409,6 +493,56 @@
         </div>
     </div>
 </section>
+<!-- PARA VOS SI -->
+<section class="paravos-section">
+    <div class="paravos-inner">
+        <div class="paravos-left">
+            <div class="section-eyebrow">¿Es para mí?</div>
+            <h2 class="section-title">Esto es para vos si…</h2>
+            <p>No hace falta ser una empresa grande ni tener todo resuelto. Si te identificás con alguna de estas situaciones, hay algo concreto que podemos mejorar.</p>
+        </div>
+        <div class="paravos-list">
+            <div class="paravos-item">
+                <div class="paravos-check">✓</div>
+                <p>Tu negocio ya tiene demanda pero el caos operativo te consume el día</p>
+            </div>
+            <div class="paravos-item">
+                <div class="paravos-check">✓</div>
+                <p>Respondés las mismas preguntas todos los días por WhatsApp o redes</p>
+            </div>
+            <div class="paravos-item">
+                <div class="paravos-check">✓</div>
+                <p>Perdés leads porque no llegás a hacer seguimiento a tiempo</p>
+            </div>
+            <div class="paravos-item">
+                <div class="paravos-check">✓</div>
+                <p>Querés escalar sin tener que contratar más gente para lo operativo</p>
+            </div>
+            <div class="paravos-item">
+                <div class="paravos-check">✓</div>
+                <p>Sabés que hay ventas que se te escapan pero no sabés exactamente dónde</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INTEGRATIONS -->
+<section class="integrations-strip">
+    <p class="integrations-label">Nos integramos con las herramientas que ya usás</p>
+    <div class="integrations-logos">
+        <div class="int-pill"><span>💬</span> WhatsApp</div>
+        <div class="int-pill"><span>📸</span> Instagram</div>
+        <div class="int-pill"><span>📘</span> Facebook</div>
+        <div class="int-pill"><span>🔧</span> Make</div>
+        <div class="int-pill"><span>⚡</span> n8n</div>
+        <div class="int-pill"><span>🔗</span> Zapier</div>
+        <div class="int-pill"><span>📧</span> Gmail</div>
+        <div class="int-pill"><span>📅</span> Calendly</div>
+        <div class="int-pill"><span>💰</span> Mercado Pago</div>
+        <div class="int-pill"><span>🎯</span> HubSpot</div>
+        <div class="int-pill"><span>📝</span> Notion</div>
+        <div class="int-pill"><span>🎵</span> TikTok</div>
+    </div>
+</section>
 <!-- CAPABILITIES -->
 <section class="capabilities-section">
     <div class="section-inner">
@@ -416,15 +550,12 @@
         <h2 class="section-title">Todo lo que podemos implementar en tu negocio</h2>
         <p class="section-subtitle">Cada solución está diseñada para eliminar trabajo manual, reducir errores y darte tiempo para enfocarte en lo que realmente hace crecer tu negocio.</p>
         <div class="capabilities-grid">
-            <div class="cap-card" data-animate><div class="cap-icon">🎯</div><h3>CRM inteligente</h3><p>Todos tus contactos organizados, etiquetados y segmentados automáticamente. Sabés en qué etapa está cada cliente sin revisar nada manualmente.</p><span class="cap-tag">Gestión de clientes</span></div>
-            <div class="cap-card" data-animate><div class="cap-icon">📧</div><h3>Campañas de email marketing</h3><p>Secuencias automáticas que se envían en el momento justo según el comportamiento de cada cliente. El mensaje correcto, a la persona correcta, sin intervención.</p><span class="cap-tag">Email automation</span></div>
-            <div class="cap-card" data-animate><div class="cap-icon">🔔</div><h3>Recordatorios automáticos</h3><p>Notificaciones por WhatsApp, email o SMS para turnos, pagos, vencimientos o cualquier evento clave. Cero seguimiento manual de tu parte.</p><span class="cap-tag">Notificaciones</span></div>
-            <div class="cap-card" data-animate><div class="cap-icon">📅</div><h3>Calendarios y agendamiento</h3><p>Tus clientes agendan solos en los horarios disponibles. Las confirmaciones, recordatorios y reprogramaciones se gestionan solas.</p><span class="cap-tag">Scheduling</span></div>
             <div class="cap-card" data-animate><div class="cap-icon">🤖</div><h3>Agentes IA y chatbots</h3><p>Asistentes inteligentes que responden consultas, califican leads y guían al cliente en el proceso de compra, disponibles las 24 horas, todos los días.</p><span class="cap-tag">Inteligencia Artificial</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">🎯</div><h3>CRM inteligente</h3><p>Todos tus contactos organizados, etiquetados y segmentados automáticamente. Sabés en qué etapa está cada cliente sin revisar nada manualmente.</p><span class="cap-tag">Gestión de clientes</span></div>
             <div class="cap-card" data-animate><div class="cap-icon">🔄</div><h3>Seguimiento automático de leads</h3><p>Cuando un cliente no responde, el sistema hace el seguimiento por vos. Secuencias inteligentes que reactivan conversaciones sin que tengas que recordarlo.</p><span class="cap-tag">Lead nurturing</span></div>
-            <div class="cap-card" data-animate><div class="cap-icon">🌐</div><h3>Landing pages y sitios web</h3><p>Páginas diseñadas para convertir, conectadas directamente a tu sistema de automatización. Cada lead que llega entra solo al flujo correcto.</p><span class="cap-tag">Diseño web</span></div>
-            <div class="cap-card" data-animate><div class="cap-icon">📊</div><h3>Pipelines de venta</h3><p>Visualizás todo tu proceso comercial en un tablero claro. Sabés cuántos leads tenés, en qué etapa están y cuánto representan en facturación potencial.</p><span class="cap-tag">Ventas</span></div>
             <div class="cap-card" data-animate><div class="cap-icon">💬</div><h3>Automatización multicanal</h3><p>Conectamos WhatsApp, Instagram, Facebook, TikTok, LinkedIn, X y email en un solo sistema. Todas las conversaciones centralizadas, con respuestas automáticas en cada canal.</p><span class="cap-tag">Omnicanal</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">📅</div><h3>Calendarios y agendamiento</h3><p>Tus clientes agendan solos en los horarios disponibles. Las confirmaciones, recordatorios y reprogramaciones se gestionan solas.</p><span class="cap-tag">Scheduling</span></div>
+            <div class="cap-card" data-animate><div class="cap-icon">📊</div><h3>Pipelines de venta</h3><p>Visualizás todo tu proceso comercial en un tablero claro. Sabés cuántos leads tenés, en qué etapa están y cuánto representan en facturación potencial.</p><span class="cap-tag">Ventas</span></div>
         </div>
     </div>
 </section>
@@ -475,6 +606,52 @@
         </div>
     </div>
 </section>
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+    <div class="section-inner">
+        <div class="section-eyebrow">Resultados reales</div>
+        <h2 class="section-title">Lo que dicen los que ya automatizaron</h2>
+        <p class="section-subtitle">Negocios reales, problemas reales, resultados concretos.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="testimonial-quote">Antes perdía 2 horas diarias respondiendo consultas por WhatsApp e Instagram mientras daba clases. Ahora el sistema responde solo, agenda la clase de prueba y me avisa cuando alguien está listo para inscribirse. El primer mes cerré un 35% más de nuevos alumnos sin cambiar nada de mi lado.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">R</div>
+                    <div>
+                        <div class="testimonial-name">Romina Casas</div>
+                        <div class="testimonial-role">Dueña · Estudio Alma Vital, CABA</div>
+                        <div class="testimonial-tag">Bienestar & Fitness</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="testimonial-quote">El onboarding de cada cliente nuevo nos costaba horas de emails y llamadas. Baires IA Lab armó un flujo que automatizó todo ese proceso. Ahorramos 5 horas por cliente y el equipo por fin puede enfocarse en lo que importa. En 3 meses recuperamos la inversión con creces.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">F</div>
+                    <div>
+                        <div class="testimonial-name">Federico Álvarez</div>
+                        <div class="testimonial-role">CEO · Agencia Impulso Digital, Córdoba</div>
+                        <div class="testimonial-tag">Marketing Digital</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="testimonial-quote">Teníamos casi un 30% de turnos que no se presentaban. Implementaron recordatorios automáticos por WhatsApp con confirmación y el número bajó al 7%. Solo eso pagó la inversión en el primer mes. Ahora también tenemos el seguimiento post-turno funcionando solo.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">N</div>
+                    <div>
+                        <div class="testimonial-name">Natalia Moreno</div>
+                        <div class="testimonial-role">Directora · Centro Estético Nova, Rosario</div>
+                        <div class="testimonial-tag">Salud & Estética</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- QUIÉNES SOMOS -->
 <section id="quienes-somos" class="team-section">
     <div class="section-inner">
@@ -518,25 +695,6 @@
                     <p class="team-bio">En Baires IA Lab es quien da vida visual a los sistemas: desde los materiales de comunicación hasta el contenido que acompaña cada etapa del proceso de venta automatizado.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- STATS -->
-<section class="stats-section">
-    <div class="stats-inner">
-        <div class="stat-item">
-            <span class="stat-number">+50</span>
-            <span class="stat-label">Automatizaciones implementadas</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-            <span class="stat-number">+100</span>
-            <span class="stat-label">Clientes activos</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Disponibilidad de los sistemas</span>
         </div>
     </div>
 </section>
@@ -626,6 +784,7 @@
                 <a href="https://forms.gle/1q1Y6oZyrFebjV3a7" target="_blank" class="btn-outline-white">Completar formulario <span class="arrow">→</span></a>
             </div>
         </div>
+        <p class="risk-badge">Sin compromiso · Diagnóstico gratuito · Sin contratos largos</p>
     </div>
 </section>
 <!-- FOOTER -->

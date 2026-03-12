@@ -201,6 +201,31 @@
         .ba-card.before .ba-list li { color: #666; }
         .ba-card.after .ba-list li { color: #333; }
         .ba-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+        /* STATS */
+        .stats-section { padding: 72px 24px; background: var(--gray-light); border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); }
+        .stats-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 0; }
+        .stat-item { flex: 1; text-align: center; padding: 24px 40px; }
+        .stat-number { display: block; font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; margin-bottom: 10px; }
+        .stat-label { display: block; font-size: 13px; font-weight: 500; color: var(--gray-text); letter-spacing: 0.2px; line-height: 1.4; }
+        .stat-divider { width: 1px; height: 64px; background: var(--gray-border); flex-shrink: 0; }
+        /* FAQ */
+        .faq-section { padding: 100px 24px; background: #fff; }
+        .faq-inner { max-width: 780px; margin: 0 auto; }
+        .faq-inner .section-eyebrow { margin-bottom: 16px; }
+        .faq-inner .section-title { margin-bottom: 56px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border-bottom: 1px solid var(--gray-border); }
+        .faq-item:first-child { border-top: 1px solid var(--gray-border); }
+        .faq-question { width: 100%; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; text-align: left; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 600; color: #1a1a1a; line-height: 1.4; transition: color 0.2s; }
+        .faq-question:hover { color: var(--purple); }
+        .faq-icon { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--gray-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s; }
+        .faq-icon svg { transition: transform 0.3s; }
+        .faq-item.open .faq-icon { background: var(--gradient); border-color: transparent; }
+        .faq-item.open .faq-icon svg { transform: rotate(45deg); }
+        .faq-item.open .faq-icon svg path { stroke: white; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+        .faq-answer-inner { padding: 0 0 24px 0; font-size: 15px; color: #555; line-height: 1.75; font-weight: 400; }
+        .faq-item.open .faq-answer { max-height: 300px; }
         /* CTA */
         .cta-section { padding: 100px 24px; background: var(--dark); text-align: center; position: relative; overflow: hidden; }
         .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(127,0,255,0.15) 0%, transparent 65%); }
@@ -241,6 +266,10 @@
             .ba-container { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
             .footer-nav { flex-wrap: wrap; justify-content: center; gap: 16px; }
+            .stats-inner { flex-direction: column; gap: 32px; }
+            .stat-divider { width: 64px; height: 1px; }
+            .stat-item { padding: 0; }
+            .faq-question { font-size: 14px; }
         }
         @media (max-width: 480px) {
             .steps-container { grid-template-columns: 1fr; }
@@ -261,6 +290,7 @@
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#como-funciona">Proceso</a></li>
             <li><a href="#quienes-somos">Nosotros</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contacto" class="nav-cta">Hablemos →</a></li>
         </ul>
         <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
@@ -450,7 +480,7 @@
                         <span>CRM</span>
                         <span>Chatbots</span>
                     </div>
-                    <p class="team-bio">Especialista en automatización de procesos y sistemas de ventas digitales, con trayectoria en desarrollo de software, testing e integraciones técnicas. No solo diseña estrategias — las implementa. Configura CRMs, construye chatbots y arma flujos en ManyChat, GoHighLevel y WhatsApp para que cada consulta se convierta en una oportunidad real de venta.</p>
+                    <p class="team-bio">Especialista en automatización de procesos y sistemas de ventas digitales, con trayectoria en desarrollo de software, testing e integraciones técnicas. No solo diseña estrategias — las implementa. Configura CRMs, construye chatbots y arma flujos de automatización multicanal para que cada consulta se convierta en una oportunidad real de venta.</p>
                     <p class="team-bio">Trabajó con emprendedores y negocios en crecimiento en distintos países, combinando lógica técnica con foco en resultados comerciales. Hoy acompaña a negocios que ya venden a ordenar y automatizar su operación para escalar de verdad.</p>
                 </div>
             </div>
@@ -475,6 +505,90 @@
         </div>
     </div>
 </section>
+<!-- STATS -->
+<section class="stats-section">
+    <div class="stats-inner">
+        <div class="stat-item">
+            <span class="stat-number">+50</span>
+            <span class="stat-label">Automatizaciones implementadas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-number">+100</span>
+            <span class="stat-label">Clientes activos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Disponibilidad de los sistemas</span>
+        </div>
+    </div>
+</section>
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+    <div class="faq-inner">
+        <div class="section-eyebrow">Preguntas frecuentes</div>
+        <h2 class="section-title">Lo que todos nos preguntan</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Cuánto tiempo tarda en implementarse?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">Depende de la complejidad del sistema. Un chatbot básico puede estar funcionando en una semana. Un sistema completo de automatización de ventas con CRM, seguimiento multicanal y flujos personalizados lleva entre 3 y 4 semanas. Antes de arrancar hacemos un diagnóstico para darte un tiempo estimado real.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿La IA va a reemplazar a mi equipo?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">No. La automatización está diseñada para liberar a tu equipo de las tareas repetitivas — responder las mismas preguntas, cargar datos, hacer seguimiento manual — para que puedan enfocarse en lo que realmente importa: cerrar ventas y atender bien a los clientes que ya están listos para comprar.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Funciona con las herramientas que ya uso?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">En la mayoría de los casos, sí. Integramos con WhatsApp, Instagram, email, CRMs y las principales plataformas de gestión. Si ya usás alguna herramienta, evaluamos cómo conectarla al nuevo sistema. Si no tenés ninguna, te recomendamos las que mejor se adapten a tu negocio y presupuesto.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Mis datos y los de mis clientes están seguros?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">Sí. Trabajamos con plataformas que cumplen estándares internacionales de seguridad y privacidad. La información de tus clientes no se comparte con terceros ni se usa para entrenar modelos externos. Podemos explicarte en detalle cómo se maneja cada dato en tu sistema.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Para qué tipo de negocios funciona?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">Para negocios que ya están vendiendo pero pierden oportunidades por falta de respuesta rápida, seguimiento inconsistente o procesos manuales. Funciona especialmente bien en servicios, consultoría, educación, salud, real estate, e-commerce y cualquier modelo que involucre conversaciones con clientes.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Qué pasa si necesito cambios después de implementado?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">Los sistemas que construimos son flexibles y evolucionan con tu negocio. Ofrecemos soporte y acompañamiento post-implementación para ajustar flujos, incorporar nuevos canales o escalar cuando sea necesario. No te dejamos solo después del lanzamiento.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Cuánto cuesta implementar un sistema?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">Cada proyecto es diferente y el precio depende del alcance de la automatización. Trabajamos con una inversión inicial de implementación y, según el caso, una tarifa mensual de mantenimiento. El primer paso es una consulta de diagnóstico sin cargo, donde evaluamos tu situación y te presentamos una propuesta concreta.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Cómo sé si realmente me va a funcionar?
+                    <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner">Antes de arrancar hacemos un diagnóstico sin costo donde analizamos tu proceso actual y te mostramos dónde estás perdiendo oportunidades. Si vemos que tiene sentido implementar, te presentamos una propuesta con resultados esperados. Si no creemos que sea el momento adecuado para tu negocio, te lo decimos con la misma honestidad.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- CTA -->
 <section id="contacto" class="cta-section">
     <div class="cta-inner">
@@ -495,11 +609,29 @@
             <a href="#servicios">Servicios</a>
             <a href="#como-funciona">Proceso</a>
             <a href="#quienes-somos">Nosotros</a>
+            <a href="#faq">FAQ</a>
             <a href="#contacto">Contacto</a>
         </nav>
-        <p class="footer-copy">© 2025 Baires IA Lab</p>
+        <p class="footer-copy">© 2026 Baires IA Lab</p>
     </div>
 </footer>
+<!-- FAQ Accordion -->
+<script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+</script>
 <!-- GHL Chatbot -->
 <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="695a601de056fe5886216ce3"></script>
 <script>

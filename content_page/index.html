@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contenido Digital con IA | Baires IA Lab</title>
+  <meta name="description" content="Creamos contenido digital estratégico impulsado por inteligencia artificial para marcas, empresas y creadores que buscan generar impacto, aumentar su alcance y potenciar sus ventas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      background: #070b1a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, video { width: 100%; display: block; }
+
+    .container { width: min(1160px, 92%); margin: 0 auto; }
+
+    /* NAV */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(7,11,26,.78);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: -.02em; }
+
+    .logo-mark {
+      width: 42px; height: 42px; border-radius: 14px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      box-shadow: 0 14px 34px rgba(59,130,246,.35);
+      font-size: 14px; font-weight: 800;
+    }
+
+    .nav-links { display: flex; gap: 28px; font-size: 15px; color: rgba(255,255,255,.72); }
+    .nav-links a:hover { color: #ffffff; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 118px 0 105px;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(59,130,246,.32), transparent 34%),
+        radial-gradient(circle at 85% 18%, rgba(139,92,246,.28), transparent 33%),
+        linear-gradient(180deg, #0b1028 0%, #070b1a 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 440px;
+      background: radial-gradient(circle, rgba(59,130,246,.22), transparent 62%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 16px; border-radius: 999px;
+      border: 1px solid rgba(96,165,250,.30);
+      background: rgba(59,130,246,.10);
+      color: #bfdbfe; font-size: 14px; font-weight: 600;
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02; letter-spacing: -.055em;
+      max-width: 850px; font-weight: 800;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #60a5fa, #a78bfa, #ffffff);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+
+    .hero-description { margin-top: 28px; max-width: 720px; font-size: 19px; color: rgba(255,255,255,.74); }
+    .hero-description.secondary { margin-top: 18px; color: rgba(255,255,255,.58); }
+
+    .actions { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 16px; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 54px; padding: 0 28px; border-radius: 14px;
+      font-weight: 700; font-size: 16px; transition: all .24s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      box-shadow: 0 18px 45px rgba(59,130,246,.30);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.82);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary:hover { box-shadow: 0 22px 55px rgba(59,130,246,.42); }
+
+    .hero-panel {
+      position: relative; border-radius: 28px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 30px 90px rgba(0,0,0,.34);
+      padding: 18px; backdrop-filter: blur(18px);
+    }
+
+    .hero-visual {
+      aspect-ratio: 4 / 4.7; border-radius: 22px;
+      overflow: hidden; background: #0f172a;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    .hero-visual img { height: 100%; object-fit: cover; opacity: .84; }
+
+    .ai-card {
+      position: absolute; left: -26px; bottom: 34px; width: 230px;
+      border-radius: 22px; border: 1px solid rgba(255,255,255,.14);
+      background: rgba(15,23,42,.88); backdrop-filter: blur(16px);
+      padding: 20px; box-shadow: 0 24px 60px rgba(0,0,0,.35);
+    }
+
+    .ai-card strong {
+      display: block; font-size: 38px; line-height: 1;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .ai-card p { color: rgba(255,255,255,.68); font-size: 14px; }
+
+    /* SECTIONS */
+    section { padding: 100px 0; }
+
+    .section-header { max-width: 760px; margin-bottom: 54px; }
+
+    .eyebrow {
+      color: #60a5fa; text-transform: uppercase;
+      letter-spacing: .18em; font-size: 13px; font-weight: 800; margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4.8vw, 56px);
+      line-height: 1.08; letter-spacing: -.045em; font-weight: 800;
+    }
+
+    .lead { font-size: 18px; color: rgba(255,255,255,.68); margin-top: 20px; max-width: 760px; }
+
+    /* SOLUTIONS */
+    .solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+    .solution-card {
+      min-height: 220px; border-radius: 24px; padding: 28px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      transition: .25s ease;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(96,165,250,.34);
+      box-shadow: 0 20px 55px rgba(30,64,175,.18);
+    }
+
+    .icon {
+      width: 46px; height: 46px; border-radius: 14px;
+      display: grid; place-items: center;
+      background: rgba(59,130,246,.14); color: #93c5fd;
+      margin-bottom: 22px; font-size: 20px;
+    }
+
+    .solution-card h3 { font-size: 21px; margin-bottom: 12px; }
+    .solution-card p { color: rgba(255,255,255,.62); font-size: 15.5px; }
+
+    /* PORTFOLIO */
+    .portfolio {
+      background: linear-gradient(180deg, rgba(15,23,42,.70), rgba(7,11,26,1));
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .portfolio-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 52px; align-items: center; }
+    .portfolio-copy p { color: rgba(255,255,255,.66); margin-top: 22px; font-size: 18px; }
+
+    .showreel {
+      position: relative; aspect-ratio: 16 / 9;
+      border-radius: 28px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111827; box-shadow: 0 34px 90px rgba(0,0,0,.42);
+    }
+
+    .showreel img, .showreel video { height: 100%; object-fit: cover; opacity: .72; }
+
+    .play { position: absolute; inset: 0; display: grid; place-items: center; }
+
+    .play span {
+      width: 86px; height: 86px; border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      display: grid; place-items: center;
+      box-shadow: 0 18px 50px rgba(59,130,246,.42);
+      font-size: 30px; padding-left: 4px;
+      transition: transform .2s ease;
+    }
+
+    .play:hover span { transform: scale(1.08); }
+
+    /* FEATURES */
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .feature-list { display: grid; gap: 16px; }
+
+    .feature-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 20px; border-radius: 18px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .check {
+      width: 26px; height: 26px; flex: 0 0 26px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(59,130,246,.20); color: #93c5fd;
+      font-weight: 800; font-size: 14px;
+    }
+
+    .feature-item p { color: rgba(255,255,255,.76); }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at center top, rgba(59,130,246,.24), transparent 38%),
+        linear-gradient(180deg, #070b1a, #0b1028);
+    }
+
+    .cta h2 { margin: 0 auto; max-width: 880px; }
+    .cta p { margin: 24px auto 0; max-width: 690px; color: rgba(255,255,255,.66); font-size: 19px; }
+    .cta .btn { margin-top: 36px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 34px 0; color: rgba(255,255,255,.52); font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 920px) {
+      .hero-grid, .portfolio-grid, .features { grid-template-columns: 1fr; }
+      .solutions-grid { grid-template-columns: 1fr 1fr; }
+      .ai-card { left: 18px; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero { padding: 78px 0 72px; }
+      section { padding: 76px 0; }
+      .solutions-grid { grid-template-columns: 1fr; }
+      .ai-card { position: relative; left: auto; bottom: auto; width: 100%; margin-top: 16px; }
+      .showreel { border-radius: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark">AI</span>
+        <span>Baires IA Lab</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#contenido">¿Qué hacemos?</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">IA + Contenido Digital</div>
+          <h1>Contenido Digital Potenciado por <span class="gradient-text">Inteligencia Artificial</span></h1>
+          <p class="hero-description">Creamos contenido digital estratégico impulsado por inteligencia artificial para marcas, empresas y creadores que buscan generar impacto, aumentar su alcance y potenciar sus ventas.</p>
+          <p class="hero-description secondary">Combinamos creatividad, tecnología y estrategia para desarrollar contenido visual, campañas y sistemas potenciados por IA, diseñados para conectar con las personas, escalar la presencia digital y generar resultados reales.</p>
+          <div class="actions">
+            <a href="#contacto" class="btn btn-primary">Agendá una llamada →</a>
+            <a href="#portfolio" class="btn btn-secondary">Ver portfolio</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-visual">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop" alt="Contenido digital con inteligencia artificial" />
+          </div>
+          <div class="ai-card">
+            <strong>AI</strong>
+            <p>Creatividad, estrategia y tecnología aplicadas a contenido visual.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+      <div class="container portfolio-grid">
+        <div class="portfolio-copy">
+          <div class="eyebrow">Portfolio</div>
+          <h2>Primero mirá lo que podemos crear</h2>
+          <p>Antes de explicarte el proceso, preferimos mostrarte el resultado. Desde imágenes hiperrealistas para productos hasta campañas cinematográficas y contenido para redes sociales, cada pieza está pensada para generar impacto visual y reforzar la identidad de marca.</p>
+          <div class="actions" style="margin-top: 30px;">
+            <a href="#contacto" class="btn btn-primary">Quiero crear contenido con IA →</a>
+          </div>
+        </div>
+
+        <div class="showreel">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop" alt="Showreel de contenido digital con IA" />
+          <div class="play"><span>▶</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES -->
+    <section id="contenido">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Soluciones que transforman</div>
+          <h2>Potenciamos la comunicación de tu marca con contenido creado con IA</h2>
+          <p class="lead">Desarrollamos piezas visuales y campañas diseñadas para redes sociales, publicidad, branding digital y lanzamientos.</p>
+        </div>
+
+        <div class="solutions-grid">
+          <article class="solution-card">
+            <div class="icon">✦</div>
+            <h3>Contenido para Redes</h3>
+            <p>Reels, videos verticales, carruseles y piezas pensadas para captar atención en Instagram, TikTok, YouTube y Facebook.</p>
+          </article>
+
+          <article class="solution-card">
+            <div class="icon">◎</div>
+            <h3>Campañas Digitales</h3>
+            <p>Creatividades para anuncios, lanzamientos, branding visual y campañas diseñadas con dirección creativa y estrategia.</p>
+          </article>
+
+          <article class="solution-card">
+            <div class="icon">AI</div>
+            <h3>Imágenes Hiperrealistas</h3>
+            <p>Visuales con IA para fotoproducto, campañas publicitarias, contenido de marca, ecommerce y comunicación digital.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section>
+      <div class="container features">
+        <div>
+          <div class="eyebrow">Contenido Creativo con IA</div>
+          <h2>Contenido pensado para conectar y convertir</h2>
+          <p class="lead">Hoy la atención vale más que nunca. Por eso creamos contenido que no solo se vea bien, sino que también genere conexión, recordación y resultados.</p>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item"><span class="check">✓</span><p>Captar atención en segundos con piezas visuales adaptadas a cada plataforma.</p></div>
+          <div class="feature-item"><span class="check">✓</span><p>Transmitir profesionalismo y fortalecer la identidad visual de la marca.</p></div>
+          <div class="feature-item"><span class="check">✓</span><p>Aumentar interacción, alcance y presencia digital con contenido estratégico.</p></div>
+          <div class="feature-item"><span class="check">✓</span><p>Crear campañas modernas con estética visual diferencial y enfoque comercial.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contacto">
+      <div class="container">
+        <div class="eyebrow">Baires IA Lab</div>
+        <h2>Potenciá tu marca con Inteligencia Artificial</h2>
+        <p>La nueva era del contenido ya empezó. Combinamos creatividad humana con herramientas de IA para crear experiencias digitales innovadoras.</p>
+        <a href="mailto:hola@bairesialab.com" class="btn btn-primary">Hablemos sobre tu proyecto →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Baires IA Lab. Todos los derechos reservados.</div>
+  </footer>
+</body>
+</html>

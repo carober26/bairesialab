@@ -31,10 +31,14 @@ bairesialab/
 
 ## Páginas
 
-| URL | Archivo |
-|-----|---------|
-| `bairesialab.com` | `index.html` |
-| `bairesialab.com/content_page` | `content_page/index.html` |
+| URL | Archivo | Descripción |
+|-----|---------|-------------|
+| `bairesialab.com` | `index.html` | Home principal |
+| `bairesialab.com/content_page` | `content_page/index.html` | Landing contenido digital con IA |
+| `bairesialab.com/coach` | `coach/index.html` | Landing para coaches |
+| `bairesialab.com/fitness` | `fitness/index.html` | Landing para trainers y coaches de fitness |
+| `bairesialab.com/infoproductor` | `infoproductor/index.html` | Landing para infoproductores |
+| `bairesialab.com/sistema` | `sistema/index.html` | Landing general del sistema |
 
 ## Hosting
 

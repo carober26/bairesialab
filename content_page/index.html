@@ -19,11 +19,17 @@
   <link rel="stylesheet" href="../styles.css" />
 
   <style>
-    /* ── Hero: compacto, título corto ── */
+    /* ── Hero: título izquierda, video derecha ── */
     .hero {
-      padding: 110px 0 32px;
-      text-align: center;
+      padding: 110px 0 80px;
       overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: center;
     }
 
     .hero-badge {
@@ -43,22 +49,63 @@
     }
 
     .hero h1 {
-      font-size: clamp(28px, 4vw, 48px) !important;
-      max-width: 680px;
-      margin: 0 auto 24px;
-      line-height: 1.08 !important;
+      font-size: clamp(32px, 4.2vw, 54px) !important;
+      line-height: 1.06 !important;
+      margin-bottom: 28px;
     }
 
     .hero-actions {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 14px;
     }
 
-    /* ── Video: pegado al hero, visible sin scrollear ── */
+    /* ── Video en el hero ── */
+    .hero-showreel {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--midnight-3);
+      box-shadow: 0 30px 80px rgba(0,0,0,.50);
+    }
+
+    .hero-showreel img,
+    .hero-showreel video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .78;
+      display: block;
+    }
+
+    .hero-showreel .play-btn {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .hero-showreel .play-btn span {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--accent-grad);
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      padding-left: 4px;
+      box-shadow: 0 12px 40px rgba(0,123,255,.44);
+      transition: transform .2s;
+    }
+
+    .hero-showreel .play-btn:hover span { transform: scale(1.08); }
+
+    /* ── Sección video separada ya no se usa ── */
     .section-video {
-      padding: 24px 0 80px;
+      display: none;
     }
 
     .showreel {
@@ -263,17 +310,17 @@
 
     /* ── Responsive ── */
     @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
       .features-grid { grid-template-columns: 1fr; }
       .solutions-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 640px) {
-      .hero { padding: 110px 0 60px; }
+      .hero { padding: 100px 0 60px; }
       .solutions-grid { grid-template-columns: 1fr; }
       .section-solutions,
       .section-features,
       .section-cta { padding: 76px 0; }
-      .section-video { padding-bottom: 76px; }
     }
   </style>
 </head>
@@ -298,30 +345,29 @@
 
   <main>
 
-    <!-- HERO: título + CTA, sin texto largo -->
-    <section class="hero trama-dots">
+    <!-- HERO: título izquierda + video derecha -->
+    <section class="hero trama-dots" id="portfolio">
       <div class="glow-bg"></div>
-      <div class="wrap">
-        <div class="hero-badge">
-          <span class="live-dot"></span>
-          IA + Contenido Digital
-        </div>
-        <h1>Contenido Digital con <span class="gradient-text">IA</span></h1>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn btn-gradient">Agendá una llamada →</a>
-          <a href="#portfolio" class="btn btn-ghost">Ver portfolio ↓</a>
-        </div>
-      </div>
-    </section>
+      <div class="wrap hero-grid">
 
-    <!-- VIDEO: lo primero que ven -->
-    <section class="section-video" id="portfolio">
-      <div class="wrap">
-        <div class="showreel">
+        <div>
+          <div class="hero-badge">
+            <span class="live-dot"></span>
+            IA + Contenido Digital
+          </div>
+          <h1>Contenido Digital Potenciado por <span class="gradient-text">Inteligencia Artificial</span></h1>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-gradient">Agendá una llamada →</a>
+            <a href="#soluciones" class="btn btn-ghost">Ver más ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-showreel">
           <!-- Reemplazá el img por tu video: <video src="../archivos/portfolio.mp4" autoplay muted loop playsinline></video> -->
           <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop" alt="Showreel de contenido digital con IA" />
           <div class="play-btn"><span>▶</span></div>
         </div>
+
       </div>
     </section>
 

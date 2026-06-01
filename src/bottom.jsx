@@ -634,12 +634,7 @@ function CTAFooter() {
           alignItems: "center", flexWrap: "wrap", gap: 16
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <span style={{
-              width: 28, height: 28, borderRadius: 7,
-              background: "var(--accent-grad)",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#fff", fontWeight: 800, fontSize: 13
-            }}>B</span>
+            <img src="archivos/isologo-cropped (1).png" alt="Baires IA Lab" style={{width:28,height:28,borderRadius:7,objectFit:'contain'}} />
             <span style={{ fontWeight: 700, fontSize: 14, letterSpacing: "0.04em", textTransform: "uppercase" }}>
               Baires IA Lab
             </span>

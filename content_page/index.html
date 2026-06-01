@@ -44,18 +44,16 @@
     }
 
     .hero h1 {
-      font-size: clamp(24px, 3.6vw, 46px) !important;
+      font-size: clamp(28px, 4vw, 52px) !important;
       line-height: 1.06 !important;
       max-width: 100%;
-      white-space: nowrap;
       margin: 0 auto 18px;
     }
 
     .hero-sub {
       font-size: 17px;
       color: rgba(255,255,255,.55);
-      max-width: 100%;
-      white-space: nowrap;
+      max-width: 680px;
       margin: 0 auto 30px;
     }
 
@@ -323,13 +321,17 @@
     }
 
     @media (max-width: 640px) {
-      .hero { padding: 100px 0 0; }
+      .hero { padding: 90px 0 0; }
+      .hero h1 { font-size: 26px !important; }
+      .hero-sub { font-size: 15px; }
       .solutions-grid  { grid-template-columns: 1fr; }
       .section-solutions,
       .section-features,
-      .section-cta { padding: 76px 0; }
+      .section-cta { padding: 60px 0; }
       .proof-stats { gap: 20px; }
       .proof-stat strong { font-size: 22px; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>

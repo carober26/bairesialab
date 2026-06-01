@@ -16,7 +16,7 @@ function Nav() {
     <nav className="nav">
       <div className="nav-inner">
         <a href="#inicio" className="nav-logo">
-          <span className="nav-logo-mark">B</span>
+          <img src="archivos/isologo-cropped (1).png" alt="Baires IA Lab" style={{width:'32px',height:'32px',borderRadius:'8px',objectFit:'contain'}} />
           <span>Baires <span style={{ opacity: 0.6 }}>IA Lab</span></span>
         </a>
         <div className="nav-links">

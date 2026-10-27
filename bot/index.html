@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
   LANDING · PACK SETTER BOT · Baires IA Lab
-  URL sugerida: bairesialab.com/setter-bot
+  URL sugerida: bairesialab.com/bot
 
   PARA CLAUDE CODE — cosas a reemplazar antes de publicar (buscá "TODO"):
   1. PIXEL_ID              → ID del Pixel de Meta (en <head>). Acá solo se dispara PageView.
@@ -283,9 +283,7 @@ footer a{text-decoration:none;margin-left:20px}
     <h2>Tu bot, <span class="gt">conversando en 30 días.</span></h2>
     <p class="lead">Elegí un horario. En 30 minutos vemos tu oferta y tus canales, y te decimos qué pack te conviene.</p>
     <div class="cal">
-      <!-- TODO: reemplazar CALENDAR_ID por el calendario de GHL.
-           En GHL > Calendario > Confirmación: redirigir a /setter-bot/gracias -->
-      <iframe id="ghl-cal" src="https://api.leadconnectorhq.com/widget/booking/CALENDAR_ID" scrolling="no" title="Agendá tu llamada"></iframe>
+      <iframe id="ghl-cal" src="https://calendar.app.google/iZ91BzeRAm9MXAzFA" scrolling="no" title="Agendá tu llamada"></iframe>
     </div>
     <div class="alt">
       <p>¿Preferís probarlo antes? Escribile a nuestro bot: es el mismo tipo de bot que armamos para tu negocio.</p>
@@ -309,7 +307,7 @@ footer a{text-decoration:none;margin-left:20px}
 
 <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
 <script>
-// Pasa los UTM y fbclid de la URL al calendario de GHL para atribuir cada lead al anuncio.
+// Pasa los UTM y fbclid de la URL al calendario para atribuir cada lead al anuncio.
 (function(){
   var params = new URLSearchParams(location.search), keep = new URLSearchParams();
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(function(k){

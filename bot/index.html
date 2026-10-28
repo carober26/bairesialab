@@ -128,6 +128,9 @@ header img{height:44px;width:auto}
 .check.no li:before{background:#2a2c4a}
 .check.no li:after{content:"×";border:0;transform:none;left:7px;top:10px;font-size:22px;font-weight:700;width:auto;height:auto;color:#9a9cb8}
 
+/* demo grid */
+.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+
 /* agenda */
 .book{position:relative;overflow:hidden;text-align:center}
 .book:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 600px at 50% 0%,rgba(139,0,255,.35),transparent 70%);pointer-events:none}
@@ -268,7 +271,7 @@ footer a{text-decoration:none;margin-left:20px}
     <div class="kicker">En la práctica</div>
     <h2>Así trabaja el bot: <span class="gt">califica y organiza.</span></h2>
     <p class="lead" style="margin-bottom:52px">Cada conversación termina con un contacto clasificado en tu CRM, listo para que tu equipo actúe.</p>
-    <div class="demo-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+    <div class="demo-grid">
 
       <!-- WHATSAPP CHAT -->
       <div style="background:#111827;border-radius:28px;overflow:hidden;border:1.5px solid var(--line)">
